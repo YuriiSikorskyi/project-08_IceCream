@@ -50,3 +50,25 @@
     }
         
 }
+
+.production__text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.75;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #FCFCFC;
+    width: 220px;
+    margin-bottom: 4px;
+
+    @media screen and (min-width:768px) {
+        width: 334px;
+        margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 463px;
+    }
+}
