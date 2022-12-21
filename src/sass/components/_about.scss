@@ -54,6 +54,26 @@
         width: 481px;
     }
 }
+
+.production__content {
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.production__thumb {
+    margin: 0 20px 40px 20px;
+
+    @media screen and (min-width: 768px) {
+        margin: 0 38px 0 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin: 0 109px 0 16px;
+    }
+}
+
+
 .production__text {
     font-family: 'Montserrat';
     font-style: normal;
