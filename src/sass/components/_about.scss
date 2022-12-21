@@ -35,12 +35,9 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #FCFCFC;
-    display: inline-block;
+    display: block;
+    margin: 0 auto 32px auto;
     
-    @media screen and (max-width: 767px) {
-        margin-bottom: 32px;
-    }
-
     @media screen and (min-width:768px) {
         font-size: 34px;
         letter-spacing: 0.06em;
