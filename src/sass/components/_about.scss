@@ -1,0 +1,52 @@
+.production {
+    background-color: #84A178;
+
+}
+
+.uppertitle {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FCFCFC;
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 768px) {
+        font-weight: 800;
+        font-size: 22px;
+        letter-spacing: 0.04em;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 30px;
+        line-height: 1.23;
+    }
+        
+    
+}
+
+.production__title {
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 1.26;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FCFCFC;
+
+    @media screen and (min-width:768px) {
+        font-size: 34px;
+        letter-spacing: 0.06em;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        line-height: 1.25;
+
+    }
+        
+}
