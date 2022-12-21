@@ -84,5 +84,42 @@
     margin-bottom: 10px;
     width: 220px;
 
+    @media screen and (min-width: 768px) {
+        line-height: 1.75;
+        width: 334px;
+        margin-bottom: 8px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.92;
+        width: 463px;
+    }
+}
+
+.production__paragraph {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: block;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.92;
+        letter-spacing: 0.04em;
+        color: #FCFCFC;
+        width: 336px;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        width: 457px;
+        margin-bottom: 54px;
+    }
+}
+
+.production__button {
     
 }
