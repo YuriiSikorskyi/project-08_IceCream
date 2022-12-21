@@ -4,10 +4,11 @@
         <h2 class="production__title">How it's made?</h2>
         <div class="production__thumb">
             <picture class="production__image">
-                <source srcset="" media="" sizes="">
-                <source srcset="" media="" sizes="">
-                <source srcset="" media="" sizes="">
-                <img srcset="" alt="">
+                <source srcset="./images/how-its-made/cow-desktop.webp 1x, ./images/how-its-made/cow-desktop@2x.webp 2x" 
+                media="(max-width: 1199px)" sizes="(min-width: 1200px) 490px, 100vw" type="image/webp">
+                <source srcset="./images/how-its-made/cow-desktop.jpg 1x, ./images/how-its-made/cow-desktop@2x.jpg 2x" 
+                media="(max-width: 1199px)" sizes="(min-width: 1200px) 490px, 100vw" type="image/jpeg">
+                <img src="./images/how-its-made/cow-desktop.jpg" alt="Cow">
             </picture>
             
         </div>
@@ -21,8 +22,8 @@
                 coffee for any mood!</p>
             <button class="production__button" type="button">
                 Read more
-                <svg class="production__arrow" width="6px" height="10px">
-                    <use href="../images/icons.svg#icon-arrow-short"></use>
+                <svg class="production__arrow" width="6" height="10">
+                    <use href="./images/icons.svg#icon-arrow-short"></use>
                 </svg>
             </button>
         </div>
