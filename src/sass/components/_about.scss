@@ -136,7 +136,7 @@
     line-height: 1.58;
     text-align: center;
     color: #FCFCFC;
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
     width: 220px;
 
     @media screen and (max-width: 767px) {
@@ -189,6 +189,7 @@
     height: 142px;
     padding: 12px 34px;
     display: flex;
+    margin: 0 auto;
 
     @media screen and (min-width: 768px) {
         &:hover {
