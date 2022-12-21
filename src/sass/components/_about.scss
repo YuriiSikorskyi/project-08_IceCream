@@ -63,13 +63,45 @@
 
 .production__thumb {
     margin: 0 20px 40px 20px;
+    position: relative;
+    background-color: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    box-shadow: 0px 5.30813px 19.9055px rgba(153, 114, 23, 0.25);
+    border-radius: 140px;
+    width: 279px;
+    height: 278px;
 
     @media screen and (min-width: 768px) {
         margin: 0 38px 0 32px;
+        border-radius: 165px;
+        width: 330px;
+        height: 330px;
     }
 
     @media screen and (min-width: 1200px) {
         margin: 0 109px 0 16px;
+        box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+        border-radius: 250px;
+        width: 490px;
+        height: 490px;
+    }
+}
+
+.production__image {
+    position: absolute;
+    border-radius: 140px;
+    width: 279px;
+    height: 278px;
+
+    @media screen and (min-width: 768px) {
+        border-radius: 1228px;
+        width: 330px;
+        height: 330px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        border-radius: 1852.2px;
+        width: 490px;
+        height: 490px;
     }
 }
 
