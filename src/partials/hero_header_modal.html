@@ -9,15 +9,15 @@
     <li class="product__item">
       <div class="wrapper wrapper--cream">
         <div class="photo__background--cream">
-          <!-- <img
+          <img
             srcset="
               ./images/modal-buy-now/cream.jpg    132w,
               ./images/modal-buy-now/cream@2x.jpg 264w
             "
-            sizes="(min-width: 1200px) 264px, (min-width: 468px) 132px, 100vw"
+            sizes="(min-width: 1200px) 132px, (min-width: 468px) 200px, 100vw"
             src="./images/modal-buy-now/cream.jpg"
             alt="cream"
-          /> -->
+          />
         </div>
         <p class="main-font">Ice cream</p>
       </div>
@@ -25,7 +25,15 @@
     <li class="product__item">
       <div class="wrapper wrapper--coffee">
         <div class="photo__background--coffee">
-          <img />
+          <img
+            srcset="
+              ./images/modal-buy-now/cofee.jpg    132w,
+              ./images/modal-buy-now/cofee@2x.jpg 264w
+            "
+            sizes="(min-width: 1200px) 132px, (min-width: 468px) 200px, 100vw"
+            src="./images/modal-buy-now/cofee.jpg"
+            alt="cream"
+          />
         </div>
         <p class="main-font">Ice coffee</p>
       </div>
@@ -33,10 +41,59 @@
     <li class="product__tem">
       <div class="wrapper wrapper--milkshake">
         <div class="photo__background--milkshake">
-          <img />
+          <img
+            srcset="
+              ./images/modal-buy-now/milkshakes.jpg    132w,
+              ./images/modal-buy-now/milkshakes@2x.jpg 264w
+            "
+            sizes="(min-width: 1200px) 132px, (min-width: 468px) 200px, 100vw"
+            src="./images/modal-buy-now/milkshakes.jpg"
+            alt="cream"
+          />
         </div>
         <p class="main-font">milkshake</p>
       </div>
     </li>
   </ul>
+  <form name="modal-form">
+    <div class="modal-form__group" role="group">
+      <label class="modal-form__label" for="user_name">
+        <div class="modal-form__wrapper">
+          <input
+            class="modal-form__field"
+            type="text"
+            id="user_name"
+            name="user_name"
+            required
+            placeholder="Name"
+          />
+        </div>
+      </label>
+      <label class="modal-form__label" for="user_phone">
+        <div class="modal-form__wrapper">
+          <input
+            class="modal-form__field"
+            type="tel"
+            id="user_phone"
+            name="user_phone"
+            required
+            placeholder="Phone"
+          />
+        </div>
+      </label>
+      <label class="modal-form__label" for="user_mail">
+        <div class="modal-form__wrapper">
+          <input
+            class="modal-form__field"
+            type="email"
+            id="user_mail"
+            name="user_mail"
+            required
+            placeholder="Comment"
+          />
+        </div>
+      </label>
+    </div>
+  </form>
+  <button class="" type="submit">submit</button>
 </div>
