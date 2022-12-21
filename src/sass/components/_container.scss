@@ -1,0 +1,25 @@
+.conteiner {
+
+	margin: 0 auto;
+
+	// phone screen
+	@media screen and (min-width: 480px) {
+		width: 480px;
+			padding-left: 20px;
+				padding-right: 20px;
+	}
+
+	// Tablet screen
+	@media screen and (min-width: 768px) {
+		width: 768px;
+			padding-left: 32px;
+				padding-right: 32px;
+	}
+
+	//Desktop screen
+	@media screen and (min-width: 1200px) {
+		width: 1200px;
+			padding-left: 16px;
+				padding-right: 16px;
+	}
+}
