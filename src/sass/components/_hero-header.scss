@@ -34,3 +34,11 @@
 // .hero__btn8 {
 //   @include btn-sec(mobile);
 // }
+
+.item {
+  background-color: red;
+}
+
+.list {
+  @include cardset(3, 30px);
+}
