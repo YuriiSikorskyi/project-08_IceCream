@@ -1,0 +1,130 @@
+.header {
+  // background-color: $colorBackground;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &__container {
+    @extend .container;
+
+    display: flex;
+    align-items: center;
+    height: 60px;
+
+    @media screen and (min-width: 768px) {
+      height: 86px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+    }
+  }
+}
+
+//////////////////////
+// logo
+//////////////////////
+
+.header__logo {
+  display: block;
+  width: 40px;
+  height: 39px;
+
+  color: $colorYellow;
+
+  @media screen and (min-width: 768px) {
+    width: 44px;
+    height: 43px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 55px;
+    height: 54px;
+  }
+}
+
+///////////////////////
+// menu open
+///////////////////////
+
+.header {
+  &__btn-menu {
+    @extend %btn;
+
+    padding: 0;
+    margin-left: auto;
+    height: 32px;
+    width: 32px;
+
+    color: white;
+
+    &:hover,
+    &:focus-visible {
+      color: black;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__icon-menu {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+  }
+}
+
+///////////////////////
+// buy now
+///////////////////////
+
+.header {
+  &__btn {
+    @include btn-prim();
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-left: 32px;
+    }
+  }
+
+  &__btn-icon {
+    width: 6px;
+    height: 10px;
+  }
+}
+
+///////////////////////
+// nav
+///////////////////////
+
+.header {
+  &__nav-list {
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+  }
+
+  &__nav-link {
+    @extend %link;
+
+    padding: 30px 0;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    color: white;
+
+    &:hover,
+    &:focus-visible {
+      color: $colorYellow;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+  .advantages {
+	background-color: #84A178;
+ }
+
+//  .advantages__container {
+
+//  } 
+
+ .advantages__list {
+	
+		@include cardset(1, 22px);
+
+ 	@media screen and (min-width: 768px) {
+		@include cardset(3, 80px);
+ 	}
+
+			 	@media screen and (min-width: 1200px) {
+			 		@include cardset(3, 32px);
+			 	}
+ }
+
+ .advantages__item {
+	display: flex;
+ 	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+ 	width: 368px;
+ }
+.icon-cow {
+	text-align: center;
+		justify-content: center;
+}
+
+//  .advantages__accent:nth-child(1)::before {
+//   	content: url(../images/advantages/cow.png);
+// 			width: 50px;
+// 			height: 50px;
+// 				position: absolute;
+// 						top: 0%;
+// 							left: 50%;
+// 							margin-right: -50%;
+// 							transform: translate(-50%, -50%)
+// }
+
+//  .advantages__accent:nth-child(2)::before {
+//  	content: url(../images/advantages/frame.png);
+//  	width: 50px;
+//  	height: 50px;
+//  }
+
+// 	  .advantages__item:nth-child(3)::before {
+// 	  	content: url(../images/advantages/ice-crema.png);
+// 	  	width: 50px;
+// 	  	height: 50px;
+// 	  }
+
+ 
+
+// .advantages-icon {
+// 	width: 50px;
+// 	height: 50px;
+// 	background-color: #F8D24E;
+// 	border-radius: 50%;
+// }
+
+
+// .icon-cow{
+// 	fill: #F8D24E;
+// }
+
+
+ .advantages__accent {
+ 	font-family: 'Montserrat';
+ 	font-style: normal;
+ 	font-weight: 700;
+ 	font-size: 58px;
+ 	line-height: 71px;
+
+ 	text-align: center;
+ 	letter-spacing: 0.04em;
+ 	text-transform: uppercase;
+
+ 	color: #FCFCFC;
+ }
+
+ .advantages__text {
+ 	font-family: 'Montserrat';
+ 	font-style: normal;
+ 	font-weight: 400;
+ 	font-size: 16px;
+ 	line-height: 176%;
+
+ 	text-align: center;
+ 	letter-spacing: 0.02em;
+
+ 	color: #FCFCFC;
+ }

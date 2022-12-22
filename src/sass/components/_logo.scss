@@ -1,0 +1,9 @@
+.logo {
+  @extend %link;
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    fill: currentColor;
+  }
+}

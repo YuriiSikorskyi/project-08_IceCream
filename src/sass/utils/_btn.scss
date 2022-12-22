@@ -1,0 +1,204 @@
+///////////////////////
+// link base
+///////////////////////
+
+%link {
+  font-family: inherit;
+  text-decoration: none;
+  cursor: $iconCustomPointer, auto;
+}
+
+///////////////////////
+// button base
+///////////////////////
+
+%btn {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  color: black;
+
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  cursor: $iconCustomPointer, auto;
+
+  // button icon
+  svg {
+    fill: currentColor;
+  }
+}
+
+///////////////////////
+// button primary
+///////////////////////
+
+%btn-prim {
+  @extend %btn;
+
+  padding: 12px 34px;
+  background-color: $colorYellow;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $colorGreen;
+  }
+
+  &:focus-visible {
+    color: white;
+  }
+
+  &:disabled {
+    background-color: $colorBtnDisabled;
+  }
+}
+
+// mobile version
+%btn-prim--mobile {
+  @extend %btn-prim;
+
+  padding: 11px 26px;
+
+  font-size: 12px;
+  line-height: calc(15 / 12);
+
+  border-radius: 8px;
+}
+
+// long version
+%btn-prim--long {
+  @extend %btn-prim;
+  width: 196px;
+}
+
+///////////////////////
+// button secondary
+///////////////////////
+
+%btn-sec {
+  @extend %btn;
+
+  padding: 12px 34px;
+
+  // background-color: transparent;
+  border-color: $colorYellow;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $colorGreen;
+  }
+
+  &:focus-visible {
+    color: white;
+  }
+
+  &:disabled {
+    border-color: $colorBtnDisabled;
+  }
+}
+
+// mobile version
+%btn-sec--mobile {
+  @extend %btn-sec;
+
+  padding: 11px 26px;
+
+  font-size: 12px;
+  line-height: calc(15 / 12);
+
+  border-radius: 8px;
+}
+
+// long version
+%btn-sec--long {
+  @extend %btn-sec;
+  width: 196px;
+}
+
+///////////////////////
+// button tertiary
+///////////////////////
+
+%btn-tert {
+  @extend %btn;
+
+  padding: 12px 21px;
+  line-height: calc(17 / 14);
+
+  color: $colorYellow;
+  text-decoration: underline;
+  // background-color: transparent;
+
+  &:hover,
+  &:focus-visible {
+    color: $colorGreen;
+  }
+
+  &:focus-visible {
+    color: white;
+  }
+
+  &:disabled {
+    color: $colorBtnDisabled;
+  }
+}
+
+// mobile version
+%btn-tert--mobile {
+  @extend %btn-tert;
+
+  padding: 7px;
+
+  font-size: 12px;
+  line-height: calc(15 / 12);
+}
+
+///////////////////////
+// mixins
+///////////////////////
+
+@mixin btn-prim($size: '') {
+  $size: to-lower-case($size);
+
+  @if ($size == 'mobile') {
+    @extend %btn-prim--mobile;
+    //
+  } @else if($size == 'long') {
+    @extend %btn-prim--long;
+    //
+  } @else {
+    @extend %btn-prim;
+  }
+}
+
+@mixin btn-sec($size: '') {
+  $size: to-lower-case($size);
+
+  @if ($size == 'mobile') {
+    @extend %btn-sec--mobile;
+    //
+  } @else if($size == 'long') {
+    @extend %btn-sec--long;
+    //
+  } @else {
+    @extend %btn-sec;
+  }
+}
+
+@mixin btn-tert($size: '') {
+  $size: to-lower-case($size);
+
+  @if ($size == 'mobile') {
+    @extend %btn-tert--mobile;
+    //
+  } @else {
+    @extend %btn-tert;
+  }
+}
