@@ -58,10 +58,6 @@
 .production__content {
     @media screen and (min-width: 768px) {
         display: flex;
-        
-    }
-
-    @media screen and (min-width: 1200px) {
         align-items: center;
     }
 }
@@ -69,7 +65,7 @@
 .production__thumb {
     margin: 0 auto 62px auto;
     position: relative;
-    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    background-color: rgba(248, 210, 78, 0.7);
     box-shadow: 0px 5.30813px 19.9055px rgba(153, 114, 23, 0.25);
     border-radius: 50%;
     width: 279px;
@@ -91,17 +87,19 @@
 .production__image {
     position: absolute;
     top: 22px;
-    border-radius: 50%;
+    border-radius: 51%;
     width: 279px;
     height: 278px;
 
     @media screen and (min-width: 768px) {
+        border-radius: 1228px;
         width: 330px;
         height: 330px;
         top: 26px;
     }
 
     @media screen and (min-width: 1200px) {
+        border-radius: 1852.2px;
         width: 490px;
         height: 490px;
         top: 39px;
@@ -177,8 +175,41 @@
         margin-bottom: 54px;
     }
 }
-.production__btn {
-    @include btn-prim();
+.production__button {
+    background-color: #F8D24E;
+    border-color: #F8D24E;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.28;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    width: 164px;
+    padding: 12px 34px;
+    display: flex;
+    
+    @media screen and (max-width: 767px) {
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 768px) {
+        &:hover {
+            background-color: #0A8817;
+            border-color: #0A8817;
+        }
+        &:focus {
+            background-color: #0A8817;
+            color: #FCFCFC;
+            border-color: #0A8817;
+        }
+        &:disabled {
+            background-color: #ABABAB;
+            border-color: #ABABAB;
+        }
+    }
 }
 
 .production__arrow {
