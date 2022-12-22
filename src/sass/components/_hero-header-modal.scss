@@ -87,6 +87,31 @@
     gap: 32px;
   }
 }
+.product__item {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  min-height: 136px;
+  padding: 96px 16px 20px 16px;
+  border-radius: 15px;
+}
+.product__item {
+}
+.product__item-icecream {
+}
+.wrapper {
+}
+.wrapper--cream {
+}
+.main-font {
+}
+.product__item-coffee {
+}
+.wrapper--coffee {
+}
+.product__milkshake {
+}
 
 // Форма
 .modal-form__group {
@@ -104,10 +129,7 @@
     margin-top: 40px;
   }
 }
-.modal-form__label {
-}
-.modal-form__wrapper {
-}
+
 .modal-form__field {
   @media screen and (max-width: 767px) {
     width: 224px;
