@@ -196,13 +196,16 @@
     @media screen and (min-width: 768px) {
         &:hover {
             background-color: #0A8817;
+            border-color: #0A8817;
         }
         &:focus {
             background-color: #0A8817;
             color: #FCFCFC;
+            border-color: #0A8817;
         }
         &:disabled {
             background-color: #ABABAB;
+            border-color: #ABABAB;
         }
     }
 }
