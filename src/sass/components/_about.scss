@@ -76,7 +76,6 @@
     height: 278px;
 
     @media screen and (min-width: 768px) {
-        margin: 0 38px 0 32px;
         width: 330px;
         height: 330px;
     }
@@ -179,6 +178,7 @@
 }
 .production__button {
     background-color: #F8D24E;
+    border-color: #F8D24E;
     border-radius: 10px;
     font-family: 'Montserrat';
     font-style: normal;
