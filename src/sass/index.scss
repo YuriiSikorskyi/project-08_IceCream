@@ -4,6 +4,8 @@
 @import './utils/variables';
 @import './utils/visually-hidden';
 @import './utils/btn';
+@import './utils/cardset';
+@import './utils/misc';
 
 // base styles
 @import './base/base';
@@ -13,7 +15,9 @@
 @import './components/section';
 @import './components/container';
 
-@import './components/hero-header';
+@import './components/header';
+@import './components/hero';
+@import './components/logo';
 @import './components/products';
 @import './components/about';
 @import './components/advantages';

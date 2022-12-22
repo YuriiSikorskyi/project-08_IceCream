@@ -1,0 +1,11 @@
+@mixin cardset($itemsPerRow, $gap: normal, $dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: wrap;
+  gap: $gap;
+
+  & > :nth-child(n) {
+    $gapsTotal: $gap * ($itemsPerRow - 1);
+    flex-basis: calc((100% - $gapsTotal) / $itemsPerRow);
+  }
+}

@@ -1,0 +1,20 @@
+// colors
+$colorYellow: #f8d24e;
+$colorGreen: #0a8817;
+$colorBackground: #84a178;
+$colorText: #fcfcfc;
+$colorBtnDisabled: #ababab;
+
+// font
+$mainFontFamily: 'Montserrat', sans-serif;
+$mainFontSize: 14px;
+$mainLineHeight: calc(27 / 14);
+
+// misc
+$iconCustomPointer: url(../images/cursor.svg);
+
+$breakpoints: (
+  'phone': 320px,
+  'tablet': 768px,
+  'desktop': 1200px,
+);
