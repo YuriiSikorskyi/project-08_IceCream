@@ -141,7 +141,10 @@
     line-height: 1.58;
     color: #FCFCFC;
     margin: 0 auto 10px auto;
-    width: 220px;
+    
+    @media screen and (max-width: 479px) {
+        width: 220px;
+    }
 
     @media screen and (max-width: 767px) {
         text-align: center;
