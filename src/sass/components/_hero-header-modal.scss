@@ -32,9 +32,9 @@
     padding: 28px;
   }
   @media screen and (min-width: 769px) {
-    width: 568px;
-    height: 644px;
-    padding: 54px;
+    max-width: 568px;
+    max-height: 644px;
+    padding: 32px 54px;
   }
 
   background: #fcfcfc;
@@ -58,68 +58,217 @@
 .button__close-icon {
   fill: #131313;
 }
-.title__font {
+.buy__title {
   font-family: 'Seymour One';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 1.4;
   text-align: center;
-  color: #131313;
-  margin-bottom: 20px;
-}
-.main-font {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-
+  // Змінна
   color: #131313;
 }
-.product__list {
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.buy__title--distance {
+  margin-bottom: 83px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 103px;
   }
-  @media screen and (min-width: 769px) {
-    display: flex;
+}
+.buy__list {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 82px;
+  }
+  @media screen and (min-width: 768px) {
     gap: 32px;
   }
+  // Змінна
+  list-style: none;
 }
-.product__item {
+.buy__item {
   position: relative;
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
-  height: 136px;
-  width: 132px;
-  padding: 96px 16px 20px 16px;
+  align-items: center;
+  justify-content: flex-end;
+  height: 135px;
+  padding: 96px 13px 20px 13px;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
   border-radius: 15px;
-  @media screen and (max-width: 767px) {
-    margin: 0 auto;
-  }
+  width: 132px;
 }
-
-.product__item-icecream {
+.buy__item--cream {
+  // Змінна
   border: 2px solid #96af8c;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
 }
-.product__item-coffee {
+.buy__item--coffee {
+  // Змінна
   background: #efd478;
   border: 2px solid #efd478;
-  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
-  border-radius: 15px;
 }
-.product__milkshake {
+.buy__item--milkshakes {
+  // Змінна
   border: 2px solid #d6936d;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-  border-radius: 15.7808px;
+}
+%before {
+  z-index: 2;
+  position: absolute;
+  content: '';
+  width: 132px;
+  height: 132px;
+  left: 50%;
+  top: -66px;
+  transform: translateX(-50%);
+  border-radius: 98px;
+}
+.buy__item--cream::before {
+  @extend %before;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+  }
+}
+.buy__item--coffee::before {
+  @extend %before;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  }
+  @media screen and (min-width: 1200px) {
+    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+  }
+}
+.buy__item--milkshakes::before {
+  @extend %before;
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+  }
+  @media screen and (min-width: 1200px) {
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+%after {
+  z-index: 3;
+  position: absolute;
+  content: '';
+  width: 132px;
+  height: 132px;
+  left: 50%;
+  top: -73px;
+  transform: translateX(-50%);
+  border-radius: 98px;
+}
+.buy__item--cream::after {
+  @extend %after;
+  // Mobile and Tablet
+  background: url(../images/modal-buy-now/cream.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/modal-buy-now/cream@2x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  // Desktop
+  @media screen and (min-width: 1200px) {
+    background: url(../images/modal-buy-now/cream.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/modal-buy-now/cream@2x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.buy__item--coffee::after {
+  @extend %after;
+  background: url(../images/modal-buy-now/cofee.jpg);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/modal-buy-now/cofee@2x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  // Desktop
+  @media screen and (min-width: 1200px) {
+    background: url(../images/modal-buy-now/cofee.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/modal-buy-now/cofee@2x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.buy__item--milkshakes::after {
+  @extend %after;
+  background: url(../images/modal-buy-now/milkshakes.jpg);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/modal-buy-now/milkshakes@2x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  // Desktop
+  @media screen and (min-width: 1200px) {
+    background: url(../images/modal-buy-now/milkshakes.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/modal-buy-now/milkshakes@2x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.buy__subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  // Змінна
+  color: #131313;
+  font-family: 'Montserrat';
 }
 
 // Форма
