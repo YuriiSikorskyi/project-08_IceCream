@@ -1,25 +1,24 @@
 .container {
+  margin: 0 auto;
 
-	margin: 0 auto;
+  // Phone screen
+  @media screen and (min-width: 320px) {
+    width: 320px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-	// phone screen
-	@media screen and (min-width: 480px) {
-		width: 480px;
-			padding-left: 20px;
-				padding-right: 20px;
-	}
+  // Tablet screen
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
-	// Tablet screen
-	@media screen and (min-width: 768px) {
-		width: 768px;
-			padding-left: 32px;
-				padding-right: 32px;
-	}
-
-	//Desktop screen
-	@media screen and (min-width: 1200px) {
-		width: 1200px;
-			padding-left: 16px;
-				padding-right: 16px;
-	}
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
