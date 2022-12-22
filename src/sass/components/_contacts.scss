@@ -1,23 +1,42 @@
 .contacts__text{
     font-weight: 500;
     font-size: 12px;
-    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+
+    @media screen and (min-width:768px){
+        font-size: 14px;
+    }
+        @media screen and (min-width:1200px) {
+            font-size: 16px;
+        }
+}
+.container__body:not(:last-child){
+    border-bottom: 1px solid #E1E1E1;
+    margin-bottom: 24px;
+
+    @media screen and (min-width:768px){
+        margin-bottom: 32px;
+    }
 }
 .list-contacts{
+    
     @media screen and (min-width:768px) {
-        display: flex;
+         @include cardset(3, 16px);
     }
 }
 .list-contacts__item {
-    padding: 40px 32px 24px;
+    padding: 40px 24px;
+    margin-bottom: 16px;
 
-    background-color: #FCFCFC;
+    background-color: $colorText;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
 }
 .list-contacts__category {
     display: inline-block;
-    background-color: #F8D24E;
+    margin-bottom: 20px;
+
+    background-color: $colorYellow;
     border-radius: 4px;
     padding: 4px 22px;
     
@@ -25,23 +44,70 @@
     line-height: 120%;
     
     color: #131313;
+
+    @media screen and (min-width:768px){
+        margin-bottom: 32px;
+        font-size: 16px;
+        line-height: 140%;
+    }
+
 }
 .list-contacts__address{
+    margin-bottom: 24px;
     font-style: normal;
+
+    @media screen and (min-width:1200px) {
+            margin-bottom: 32px;
+        }
+}
+.list-schedule{
+    margin-bottom: 24px;
+
+    @media screen and (min-width:1200px) {
+            margin-bottom: 32px;
+        }
+}
+.list-schedule__item:not(:last-child){
+    @media screen and (min-width:1200px) {
+        margin-bottom: 12px;
+    }
+   
 }
 .list-contacts__text{
     line-height: 186%;
     color: #131313;
 
     &--grey{
-        color: #ABABAB;
+        color: $colorBtnDisabled;
     }
 }
 .address__link{
     line-height: 183%;
     color: #D6936D;
 }
+
 .contacts__link{
     line-height: 160%;
     color: #131313;
+}
+.button-contacts{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+    @media screen and (max-width:767.98px) {
+        flex-direction: column;
+    }
+    
+}
+.button-location{
+    margin-top: 20px;
+    margin-bottom: 16px;
+    @extend %btn-prim--long;
+    @include btn-prim;
+}
+.button-franchise{
+    width: 196px;
+    @extend %btn-sec;
+    @include btn-sec;
 }
