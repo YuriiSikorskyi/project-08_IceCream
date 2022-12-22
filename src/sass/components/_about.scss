@@ -37,7 +37,7 @@
     color: #FCFCFC;
     display: block;
     margin: 0 auto 32px auto;
-    width: 220px;
+    min-width: 220px;
 
     @media screen and (min-width:768px) {
         font-size: 34px;
@@ -115,8 +115,11 @@
     line-height: 1.75;
     letter-spacing: 0.04em;
     color: #FCFCFC;
-    width: 220px;
     margin: 0 auto 4px auto;
+
+    @media screen and (max-width: 479px) {
+        width: 220px;
+    }
 
     @media screen and (max-width: 767px) {
         text-align: center;
