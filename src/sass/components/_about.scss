@@ -177,41 +177,8 @@
         margin-bottom: 54px;
     }
 }
-.production__button {
-    background-color: #F8D24E;
-    border-color: #F8D24E;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 1.28;
-    align-items: center;
-    text-align: center;
-    color: #000000;
-    width: 164px;
-    padding: 12px 34px;
-    display: flex;
-    
-    @media screen and (max-width: 767px) {
-        margin: 0 auto;
-    }
-
-    @media screen and (min-width: 768px) {
-        &:hover {
-            background-color: #0A8817;
-            border-color: #0A8817;
-        }
-        &:focus {
-            background-color: #0A8817;
-            color: #FCFCFC;
-            border-color: #0A8817;
-        }
-        &:disabled {
-            background-color: #ABABAB;
-            border-color: #ABABAB;
-        }
-    }
+.production__btn {
+    @include btn-prim();
 }
 
 .production__arrow {
