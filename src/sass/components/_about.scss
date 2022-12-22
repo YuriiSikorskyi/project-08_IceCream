@@ -58,6 +58,10 @@
 .production__content {
     @media screen and (min-width: 768px) {
         display: flex;
+        
+    }
+
+    @media screen and (min-width: 1200px) {
         align-items: center;
     }
 }
@@ -87,19 +91,17 @@
 .production__image {
     position: absolute;
     top: 22px;
-    border-radius: 51%;
+    border-radius: 50%;
     width: 279px;
     height: 278px;
 
     @media screen and (min-width: 768px) {
-        border-radius: 1228px;
         width: 330px;
         height: 330px;
         top: 26px;
     }
 
     @media screen and (min-width: 1200px) {
-        border-radius: 1852.2px;
         width: 490px;
         height: 490px;
         top: 39px;
