@@ -1,0 +1,7 @@
+@mixin dpr($from) {
+  @media (min-device-pixel-ratio: #{$from}), 
+      (min-resolution: (96dpi * $from)), 
+      (min-resolution: "#{$from}dppx") {
+    @content;
+  }
+}
