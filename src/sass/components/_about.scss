@@ -66,11 +66,6 @@
     margin: 0 auto 62px auto;
     position: relative;
     background-color: rgba(248, 210, 78, 0.7);
-    background-image: linear-gradient
-    (to bottom, 
-    rgba(248, 210, 78, 0.7), 
-    rgba(248, 210, 78, 0.7)
-    );
     box-shadow: 0px 5.30813px 19.9055px rgba(153, 114, 23, 0.25);
     border-radius: 50%;
     width: 279px;
@@ -92,7 +87,7 @@
 .production__image {
     position: absolute;
     top: 22px;
-    border-radius: 50%;
+    border-radius: 51%;
     width: 279px;
     height: 278px;
 
