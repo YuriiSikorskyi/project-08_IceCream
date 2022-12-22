@@ -103,11 +103,8 @@
 .button-location{
     margin-top: 20px;
     margin-bottom: 16px;
-    @extend %btn-prim--long;
-    @include btn-prim;
+    @include btn-prim('long');
 }
 .button-franchise{
-    width: 196px;
-    @extend %btn-sec;
-    @include btn-sec;
+    @include btn-sec('long');
 }
