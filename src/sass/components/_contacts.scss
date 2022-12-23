@@ -19,7 +19,6 @@
     }
 }
 .list-contacts{
-    
     @media screen and (min-width:768px) {
          @include cardset(3, 16px);
     }
@@ -84,6 +83,12 @@
 .address__link{
     line-height: 183%;
     color: #D6936D;
+
+    @extend %link;
+
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 .contacts__link{
