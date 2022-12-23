@@ -1,0 +1,67 @@
+.footer {
+  background-color: $colorBackground;
+}
+// .foot {
+// }
+// .foot__slogan {
+// }
+.foot__slogan--up {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  text-transform: uppercase;
+}
+
+.foot__slogan--down {
+  width: 200px;
+  margin-top: 16px;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: calc(41 / 34);
+  text-transform: uppercase;
+}
+// .foot-contacts {
+// }
+.foot-contacts__list {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+// .foot-contacts__item {
+// }
+.foot-contacts__link {
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.foot-contacts-icon {
+  fill: $colorBackground;
+}
+
+.foot-contacts__link:hover .foot-contacts-icon,
+.foot-contacts__link:focus .foot-contacts-icon {
+  fill: $colorText;
+}
+
+.foot-contacts__tel {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: calc(22/12);
+  text-align: right;
+  color: #131313;
+}
+
+.foot-contacts__tel--link {
+  color: #FCFCFC;
+  background-color: transparent;
+}
+// .copyright {
+// }
+// .copyright__text {
+// }
