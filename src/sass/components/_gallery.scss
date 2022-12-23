@@ -1,0 +1,77 @@
+#slideshow {
+  text-align: center;
+  overflow: hidden;
+  height: 130px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  #slideshow {
+    height: 327px;
+    width: 704px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #slideshow {
+  height: 422px;
+  width: 1013px;
+  }
+}
+
+.slide-wrapper {
+  width: 2912px;
+  animation: slide 18s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 510px;
+  width: 728px;
+}
+
+//  .slide:nth-child(1) {
+//   background-image: url(../../images/slider/sli1-phone.jpg);
+// }
+/*
+.slide:nth-child(2) {
+  background: #037E8C;
+}
+
+.slide:nth-child(3) {
+  background: #36BF66;
+}
+
+.slide:nth-child(4) {
+  background: #D9D055;
+} */
+
+@keyframes slide {
+  20% {
+    margin-left: 0px;
+  }
+
+  30% {
+    margin-left: -728px;
+  }
+
+  50% {
+    margin-left: -728px;
+  }
+
+  60% {
+    margin-left: -1456px;
+  }
+
+  70% {
+    margin-left: -1456px;
+  }
+
+  80% {
+    margin-left: -2184px;
+  }
+
+  90% {
+    margin-left: -2184px;
+  }
+}
