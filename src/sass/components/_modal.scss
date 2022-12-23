@@ -284,6 +284,14 @@ textarea {
   border-radius: 10px;
 }
 
+.btn-prim{
+@extend %btn-prim--mobile;
+
+}
+
+.btn-sec{
+  @extend %btn-sec;
+}
 
 .btn-prim__franc {
   margin-bottom: 28px;
