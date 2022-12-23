@@ -6,7 +6,7 @@
 .products__label {
   font-weight: 800;
   font-size: 30px;
-  line-height: calc(37px / 30px);
+  line-height: 1.23;
 
   text-align: center;
   letter-spacing: 0.04em;
@@ -18,7 +18,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
-  line-height: calc(45px / 36px);
+  line-height: 1.25;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -84,26 +84,24 @@
   }
 
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 32px) / 3);
-  }
+    flex-basis: calc((100% - 32px) / 3);}
 
   @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 58px) / 3);
-  }
+    flex-basis: calc((100% - 58px) / 3);}
 }
 
 .products__item--cream {
-  // Змінна
+  
   background-color: #aec6a5;
 }
 
 .products__item--coffee {
-  // Змінна
+  
   background: #efd478;
 }
 
 .products__item--milkshakes {
-  // Змінна
+  
   background: #d6936d;
 }
 
@@ -208,8 +206,7 @@
 }
 
 .products__item--cream::after {
-  @extend %after;
-  // Mobile and Tablet
+  @extend %after;  
   background: url(../images/products/cream-tablet.jpg);
 
   @media (min-device-pixel-ratio: 2),
@@ -221,7 +218,6 @@
     background-size: contain;
   }
 
-  // Desktop
   @media screen and (min-width: 1200px) {
     background: url(../images/products/cream-desktop.jpg);
 
@@ -247,7 +243,6 @@
     background-size: contain;
   }
 
-  // Desktop
   @media screen and (min-width: 1200px) {
     background: url(../images/products/cofee-desktop.jpg);
 
@@ -274,7 +269,6 @@
     background-size: contain;
   }
 
-  // Desktop
   @media screen and (min-width: 1200px) {
     background: url(../images/products/milkshakes-desktop.jpg);
 
@@ -292,13 +286,11 @@
 .products__subtitle {
   font-weight: 700;
   font-size: 20px;
-  line-height: calc(24px / 20px);
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
-  // Змінна
-  color: #131313;
 }
 
 .products__subtitle--distance {
@@ -316,9 +308,6 @@
   text-align: center;
   letter-spacing: 0.04em;
 
-  //   margin-bottom: auto;
-
-  // Змінна
   color: #131313;
   font-family: 'Montserrat';
 }
@@ -331,13 +320,17 @@
   margin-left: auto;
   margin-right: auto;
 
-  cursor: $iconCustomPointer, auto;
-
-  // Змінна
   display: flex;
+
+  cursor: $iconCustomPointer, auto;
+  
 }
 
 .products__icon {
-  // Змінна
-  fill: #131313;
+    fill: #131313;
+
+  .products__btn:hover &,
+  .products__btn:focus & {
+    fill: white;
+  }
 }
