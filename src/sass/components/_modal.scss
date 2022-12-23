@@ -1,0 +1,306 @@
+/*  !!! треба буде замінити кнопку */
+// a {
+//   padding: 20px;
+//   display: inline-block;
+//   text-decoration: none;
+//   background-color: #F8D24E;
+//   margin: 10px;
+//   color: #131313;
+//   border-radius: 3px;
+// }
+
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  /* margin: 1rem 0; */
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid #84A178;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Стилі для підложки */
+.overlay {
+
+  /* ховаємо підложку  */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 20;
+  transition: .3s all;
+}
+
+
+/* Стилі для модальних вікон */
+
+.modal {
+
+  /* ховаємо вікна  */
+  opacity: 0;
+  visibility: hidden;
+
+
+  /*  встановлюємо ширину  */
+  width: 280px;
+  height: auto;
+
+  /*  центруємо і задаємо z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  /* має бути вище ніж у підложки*/
+
+  /*  дод.стилі   */
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+  text-align: center;
+
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+
+  background-color: #FCFCFC;
+  border: 2px solid #F8D24E;
+  border-radius: 10px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 568px;
+    height: auto;
+  }
+
+}
+
+/* Стилі для активних класів підложки і вікна */
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стилі для кнопки закриття */
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+.modal__container {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 28px 30px 24px 30px;
+}
+
+
+.modal_video {
+  margin: 32px 60px;
+  height: 100%;
+}
+
+.modal__form {
+  display: block;
+
+}
+
+
+.modal__wrapper {
+  height: auto;
+}
+
+
+.modal__title {
+  text-align: center;
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24/16);
+  color: var(--title_color);
+  margin-top: 28px;
+  margin-bottom: 28px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .modal__title {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+}
+
+
+
+.modal__text,
+.modal__text--video {
+  margin-top: 20px;
+  margin-bottom: 24px;
+  text-align: left;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal__text--video {
+  width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .modal__text {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .modal__text--video {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+    width: 448px;
+    height: auto;
+  }
+}
+
+.modal__map {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  margin-bottom: 8px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .modal__map {
+    width: 448px;
+    height: 260px;
+    margin-bottom: 32px;
+  }
+
+}
+
+.modal__map iframe {
+
+  height: 100%;
+  background-color: var(--main_color);
+  border-radius: 10px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .modal__map {
+    width: 448px;
+    height: 260px;
+    margin-bottom: 32px;
+  }
+
+}
+
+.modal__group {
+  margin-bottom: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal__group {
+    margin-bottom: 16px;
+
+  }
+
+}
+
+.modal__comment {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal__comment {
+    margin-bottom: 32px;
+  }
+
+}
+
+.input__form {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  width: 100%;
+  color: #131313;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84A178;
+  border-radius: 10px;
+  /* padding-left: 12px; */
+
+
+}
+
+
+
+.comment {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+
+
+
+  color: #131313;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84A178;
+  border-radius: 10px;
+}
+
+.btn-prim{
+@extend %btn-prim--mobile;
+
+}
+
+.btn-sec{
+  @extend %btn-sec;
+}
+
+.btn-prim__franc {
+  margin-bottom: 28px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-prim__franc {
+    margin-bottom: 32px;
+  }
+
+}

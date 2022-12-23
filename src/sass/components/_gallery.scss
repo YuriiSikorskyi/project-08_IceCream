@@ -1,0 +1,80 @@
+#slideshow {
+  position: absolute;
+    top: -25%;
+    left: 50%;
+  text-align: center;
+  overflow: hidden;
+  height: 130px;
+  width: 280px;
+  margin: 0 auto;
+  border-radius: 24px;
+}
+
+.slide-wrapper {
+  width: 2912px;
+  animation: slide 18s ease infinite;
+}
+
+.slide {
+  float: left;
+  height: 130px;
+  width: 280px;
+}
+@media screen and (min-width: 768px) {
+  #slideshow, .slide{
+    height: 327px;
+    width: 704px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #slideshow, .slide{
+  height: 422px;
+  width: 1013px;
+  }
+}
+
+//  .slide:nth-child(1) {
+//   background-image: url(../../images/slider/sli1-phone.jpg);
+// }
+/*
+.slide:nth-child(2) {
+  background-image: url(../../images/slider/sli1-phone.jpg);
+}
+
+.slide:nth-child(3) {
+  background-image: url(../../images/slider/sli1-phone.jpg);;
+}
+
+.slide:nth-child(4) {
+  background-image: url(../../images/slider/sli1-phone.jpg);
+} */
+
+@keyframes slide {
+  30% {
+    margin-left: 0px;
+  }
+
+  40% {
+    margin-left: -728px;
+  }
+
+  60% {
+    margin-left: -728px;
+  }
+
+  70% {
+    margin-left: -1456px;
+  }
+
+  80% {
+    margin-left: -1456px;
+  }
+
+  90% {
+    margin-left: -2184px;
+  }
+
+  90% {
+    margin-left: -2184px;
+  }
+}

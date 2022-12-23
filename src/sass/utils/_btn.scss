@@ -1,0 +1,148 @@
+///////////////////////
+// link base
+///////////////////////
+
+%link {
+  font-family: inherit;
+  text-decoration: none;
+  cursor: $iconCustomPointer, auto;
+}
+
+///////////////////////
+// button base
+///////////////////////
+
+%btn {
+  display: block;
+  padding: 0;
+
+  background-color: transparent;
+  border-style: none;
+
+  cursor: $iconCustomPointer, auto; //pointer
+}
+
+@mixin btn-base() {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+
+  color: $colorBlack;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  cursor: $iconCustomPointer, auto; //pointer
+
+  // button icon
+  svg {
+    fill: currentColor;
+  }
+}
+
+@mixin btn--mobile() {
+  padding: 10px 24px;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  border-radius: 8px;
+}
+
+///////////////////////
+// button primary
+///////////////////////
+
+@mixin btn-prim($size: '') {
+  @include btn-base();
+
+  padding: 11px 34px;
+  background-color: $colorYellow;
+
+  $size: to-lower-case($size);
+
+  @if ($size == 'mobile') {
+    @include btn--mobile();
+  } @else if($size == 'long') {
+    padding: 11px;
+    width: 196px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $colorGreen;
+  }
+  &:focus-visible {
+    color: $colorText;
+  }
+  &:disabled {
+    background-color: $colorBtnDisabled;
+  }
+}
+
+///////////////////////
+// button secondary
+///////////////////////
+
+@mixin btn-sec($size: '') {
+  @include btn-base();
+
+  padding: 11px 34px;
+  border-color: $colorYellow;
+
+  $size: to-lower-case($size);
+
+  @if ($size == 'mobile') {
+    @include btn--mobile();
+  } @else if($size == 'long') {
+    padding: 11px;
+    width: 196px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: $colorGreen;
+  }
+  &:focus-visible {
+    color: $colorText;
+  }
+  &:disabled {
+    border-color: $colorBtnDisabled;
+  }
+}
+
+///////////////////////
+// button tertiary
+///////////////////////
+
+@mixin btn-tert($size: '') {
+  @include btn-base();
+
+  padding: 15px 22px;
+  line-height: calc(17 / 14);
+
+  color: $colorYellow;
+  text-decoration: underline;
+
+  $size: to-lower-case($size);
+
+  @if ($size == 'mobile') {
+    padding: 7px;
+    font-size: 12px;
+    line-height: calc(15 / 12);
+  }
+
+  &:hover {
+    color: $colorGreen;
+  }
+  &:focus-visible {
+    color: $colorText;
+  }
+  &:disabled {
+    color: $colorBtnDisabled;
+  }
+}

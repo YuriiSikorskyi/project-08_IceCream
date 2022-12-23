@@ -1,0 +1,336 @@
+.products {
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #131313;
+}
+.products__label {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.23;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+}
+.products__title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    letter-spacing: 0.06em;
+  }
+}
+
+.products__title--distance {
+  margin-bottom: 148px;
+  margin-top: 12px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 200px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 303px;
+  }
+}
+
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 168px;
+  }
+
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 29px;
+  }
+}
+
+.products__item {
+  position: relative;
+
+  display: flex;
+
+  justify-content: flex-end;
+  flex-direction: column;
+
+  min-height: 420px;
+  padding: 123px 40px 16px 40px;
+  @media screen and (min-width: 768px) {
+    padding: 108px 26px 12px 26px;
+    min-height: 428px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 165px 64px 60px 64px;
+    min-height: 536px;
+  }
+
+  border-radius: 24px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 280px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 32px) / 3);}
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 58px) / 3);}
+}
+
+.products__item--cream {
+  
+  background-color: #aec6a5;
+}
+
+.products__item--coffee {
+  
+  background: #efd478;
+}
+
+.products__item--milkshakes {
+  
+  background: #d6936d;
+}
+
+%before {
+  z-index: 2;
+
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  top: -100px;
+
+  transform: translateX(-50%);
+
+  border-radius: 100px;
+
+  @media screen and (min-width: 1200px) {
+    width: 302px;
+    height: 302px;
+    top: -151px;
+    border-radius: 150px;
+  }
+}
+
+.products__item--cream::before {
+  @extend %before;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+  }
+}
+
+.products__item--coffee::before {
+  @extend %before;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  }
+  @media screen and (min-width: 1200px) {
+    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+  }
+}
+
+.products__item--milkshakes::before {
+  @extend %before;
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+  }
+  @media screen and (min-width: 1200px) {
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+
+%after {
+  z-index: 3;
+
+  position: absolute;
+  content: '';
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  top: -111px;
+
+  transform: translateX(-50%);
+
+  border-radius: 100px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media screen and (min-width: 768px) {
+    top: -112px;
+    border-radius: 98px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: -167px;
+    width: 302px;
+    height: 302px;
+    border-radius: 150px;
+  }
+}
+
+.products__item--cream::after {
+  @extend %after;  
+  background: url(../images/products/cream-tablet.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/products/cream-tablet@2x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background: url(../images/products/cream-desktop.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/cream-desktop@2x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.products__item--coffee::after {
+  @extend %after;
+  background: url(../images/products/cofee-tablet.jpg);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/products/cofee-tablet@2x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background: url(../images/products/cofee-desktop.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/cofee-desktop@2x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.products__item--milkshakes::after {
+  @extend %after;
+  background: url(../images/products/milkshakes-tablet.jpg);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/products/milkshakes-tablet@2x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background: url(../images/products/milkshakes-desktop.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/milkshakes-desktop@2x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+.products__subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+}
+
+.products__subtitle--distance {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 66px;
+  }
+}
+
+.products__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 176%;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #131313;
+  font-family: 'Montserrat';
+}
+
+.products__btn {
+  background-color: transparent;
+  border: none;
+
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+
+  cursor: $iconCustomPointer, auto;
+  
+}
+
+.products__icon {
+    fill: #131313;
+
+  .products__btn:hover &,
+  .products__btn:focus & {
+    fill: white;
+  }
+}

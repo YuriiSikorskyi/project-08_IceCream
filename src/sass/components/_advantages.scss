@@ -1,0 +1,128 @@
+.advantages {
+  background-color: #84a178;
+}
+
+.advantages__container {
+  padding-top: 116px;
+  padding-bottom: 64px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 142px;
+    padding-bottom: 204px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 150px;
+    padding-bottom: 178px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  gap: 94px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    gap: 80px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 32px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  @media screen and (min-width: 768px) {
+    width: 152px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 368px;
+  }
+}
+
+.advantages__icon-cow::before {
+  content: url(../images/advantages/cow.png);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  top: -16px;
+  @media screen and (min-width: 768px) {
+    top: -32px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: -40px;
+  }
+}
+
+.advantages__icon-frame::before {
+  content: url(../images/advantages/frame.png);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  top: -16px;
+  @media screen and (min-width: 768px) {
+    top: -32px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: -40px;
+  }
+}
+
+.advantages__icon-icecrema::before {
+  content: url(../images/advantages/ice-crema.png);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  top: -16px;
+  @media screen and (min-width: 768px) {
+    top: -32px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: -40px;
+  }
+}
+
+.advantages__accent {
+  font-weight: 700;
+  text-align: center;
+  font-size: 36px;
+  line-height: calc(44 / 36);
+	color: $colorText;
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+    line-height: calc(59 / 48);
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+    line-height: calc(71 / 58);
+  }
+}
+
+.advantages__text {
+	color: $colorText;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 170%;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 174%;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 176%;
+  }
+}

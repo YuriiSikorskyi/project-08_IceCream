@@ -1,0 +1,40 @@
+html {
+  // chrome://flags/#smooth-scrolling
+  scroll-behavior: smooth;
+}
+
+body {
+  // cursor: $iconCustomPointer, auto;
+
+  font-family: $mainFontFamily;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  letter-spacing: 0.04em;
+  color: $colorBlack; //$colorText;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../images/bg/Backgroud_mobile.jpg');
+
+  @include dpr(2) {
+    background-image: url('../images/bg/Backgroud_mobile@2x.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/bg/Background_tablet.jpg');
+
+    @include dpr(2) {
+      background-image: url('../images/bg/Background_tablet@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url('../images/bg/Backgroud_desktop.jpg');
+
+    @include dpr(2) {
+      background-image: url('../images/bg/Backgroud_desktop@2x.jpg');
+    }
+  }
+}
