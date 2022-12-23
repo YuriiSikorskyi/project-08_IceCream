@@ -286,12 +286,12 @@ textarea {
 }
 
 .btn-prim{
-@extend %btn-prim--mobile;
+@include btn-prim();
 
 }
 
 .btn-sec{
-  @extend %btn-sec;
+  @include btn-sec();
 }
 
 .btn-prim__franc {
