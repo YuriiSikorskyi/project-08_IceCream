@@ -144,7 +144,7 @@
         text-align: center;
     }
 
-    @media screen and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
         line-height: 1.75;
         width: 334px;
         margin-bottom: 8px;
