@@ -4,11 +4,13 @@ html {
 }
 
 body {
+  // cursor: $iconCustomPointer, auto;
+
   font-family: $mainFontFamily;
   font-size: $mainFontSize;
   line-height: $mainLineHeight;
   letter-spacing: 0.04em;
-  color: $colorText;
+  color: $colorBlack; //$colorText;
 
   background-repeat: no-repeat;
   background-position: center;
