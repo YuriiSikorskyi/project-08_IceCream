@@ -136,6 +136,7 @@ textarea {
   line-height: calc(24/16);
   color: var(--title_color);
   margin-top: 28px;
+  margin-bottom: 28px;
   margin-left: auto;
   margin-right: auto;
 
@@ -148,7 +149,7 @@ textarea {
     font-size: 20px;
     line-height: 1.4;
     margin-top: 32px;
-
+    margin-bottom: 32px;
   }
 
 }
@@ -284,6 +285,14 @@ textarea {
   border-radius: 10px;
 }
 
+.btn-prim{
+@extend %btn-prim--mobile;
+
+}
+
+.btn-sec{
+  @extend %btn-sec;
+}
 
 .btn-prim__franc {
   margin-bottom: 28px;
