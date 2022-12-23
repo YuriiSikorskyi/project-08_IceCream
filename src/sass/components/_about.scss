@@ -1,5 +1,5 @@
 .production {
-    background-color: #84A178;
+    background-color: $colorBackground;
     padding-top: 60px;
     padding-bottom: 50px;
     @media screen and (min-width: 768px) {
@@ -7,18 +7,16 @@
     }
 }
 .uppertitle {
-    font-family: 'Montserrat';
     font-weight: 700;
     font-size: 18px;
     line-height: 1.22;
     text-align: center;
     text-transform: uppercase;
-    color: #FCFCFC;
+    color: $colorWhite;
     margin-bottom: 12px;
     @media screen and (min-width: 768px) {
         font-weight: 800;
         font-size: 22px;
-        letter-spacing: 0.04em;
     }
     @media screen and (min-width: 1200px) {
         font-size: 30px;
@@ -26,15 +24,14 @@
     }
 }
 .production__title {
-    font-family: 'Seymour One';
+    font-family: $secondaryFontFamily;
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 1.26;
     text-align: center;
-    letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #FCFCFC;
+    color: $colorWhite;
     display: block;
     margin: 0 auto 32px auto;
     min-width: 220px;
@@ -108,13 +105,11 @@
 
 
 .production__text {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.75;
-    letter-spacing: 0.04em;
-    color: #FCFCFC;
+    color: $colorWhite;
     margin: 0 auto 4px auto;
 
     @media screen and (max-width: 479px) {
@@ -134,12 +129,10 @@
     }
 }
 .production__information {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
     line-height: 1.58;
-    color: #FCFCFC;
+    color: $colorWhite;
     margin: 0 auto 10px auto;
     
     @media screen and (max-width: 479px) {
@@ -154,10 +147,14 @@
         line-height: 1.75;
         width: 334px;
         margin-bottom: 8px;
+        
     }
+
+    @media screen and (max-width: 1199px) {
+        font-size: 12px;
+    }
+    
     @media screen and (min-width: 1200px) {
-        font-size: 14px;
-        line-height: 1.92;
         width: 463px;
     }
 }
@@ -165,13 +162,10 @@
     display: none;
     @media screen and (min-width: 768px) {
         display: block;
-        font-family: 'Montserrat';
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
-        line-height: 1.92;
-        letter-spacing: 0.04em;
-        color: #FCFCFC;
+        color: $colorWhite;
         width: 336px;
         margin-bottom: 32px;
     }
@@ -191,17 +185,17 @@
 
     @media screen and (min-width: 768px) {
         &:hover {
-            background-color: #0A8817;
-            border-color: #0A8817;
+            background-color: $colorGreen;
+            border-color: $colorGreen;
         }
         &:focus {
-            background-color: #0A8817;
-            color: #FCFCFC;
-            border-color: #0A8817;
+            background-color: $colorGreen;
+            color: $colorWhite;
+            border-color: $colorGreen;
         }
         &:disabled {
-            background-color: #ABABAB;
-            border-color: #ABABAB;
+            background-color: $colorBtnDisabled;
+            border-color: $colorBtnDisabled;
         }
     }
 }
@@ -211,7 +205,7 @@
     margin-left: 7px;
     @media screen and (min-width: 768px) {
         &:focus {
-            fill: #FCFCFC;
+            fill: $colorWhite;
         }
     }
 }
