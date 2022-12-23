@@ -13,6 +13,16 @@
 ///////////////////////
 
 %btn {
+  display: block;
+  padding: 0;
+
+  background-color: transparent;
+  border-style: none;
+
+  cursor: $iconCustomPointer, auto; //pointer
+}
+
+@mixin btn-base() {
   display: flex;
   gap: 8px;
   align-items: center;
@@ -22,13 +32,13 @@
   font-weight: 600;
   font-size: 14px;
   line-height: calc(18 / 14);
-  color: black;
 
+  color: $colorBlack;
   background-color: transparent;
   border: 2px solid transparent;
   border-radius: 10px;
 
-  cursor: $iconCustomPointer, auto;
+  cursor: $iconCustomPointer, auto; //pointer
 
   // button icon
   svg {
@@ -36,169 +46,101 @@
   }
 }
 
+@mixin btn--mobile() {
+  padding: 10px 24px;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  border-radius: 8px;
+}
+
 ///////////////////////
 // button primary
 ///////////////////////
 
-%btn-prim {
-  @extend %btn;
+@mixin btn-prim($size: '') {
+  @include btn-base();
 
-  padding: 12px 34px;
+  padding: 11px 34px;
   background-color: $colorYellow;
+
+  $size: to-lower-case($size);
+
+  @if ($size == 'mobile') {
+    @include btn--mobile();
+  } @else if($size == 'long') {
+    width: 196px;
+  }
 
   &:hover,
   &:focus-visible {
     background-color: $colorGreen;
   }
-
   &:focus-visible {
-    color: white;
+    color: $colorText;
   }
-
   &:disabled {
     background-color: $colorBtnDisabled;
   }
-}
-
-// mobile version
-%btn-prim--mobile {
-  @extend %btn-prim;
-
-  padding: 11px 26px;
-
-  font-size: 12px;
-  line-height: calc(15 / 12);
-
-  border-radius: 8px;
-}
-
-// long version
-%btn-prim--long {
-  @extend %btn-prim;
-  width: 196px;
 }
 
 ///////////////////////
 // button secondary
 ///////////////////////
 
-%btn-sec {
-  @extend %btn;
+@mixin btn-sec($size: '') {
+  @include btn-base();
 
-  padding: 12px 34px;
-
-  // background-color: transparent;
+  padding: 11px 34px;
   border-color: $colorYellow;
+
+  $size: to-lower-case($size);
+
+  @if ($size == 'mobile') {
+    @include btn--mobile();
+  } @else if($size == 'long') {
+    width: 196px;
+  }
 
   &:hover,
   &:focus-visible {
     border-color: $colorGreen;
   }
-
   &:focus-visible {
-    color: white;
+    color: $colorText;
   }
-
   &:disabled {
     border-color: $colorBtnDisabled;
   }
-}
-
-// mobile version
-%btn-sec--mobile {
-  @extend %btn-sec;
-
-  padding: 11px 26px;
-
-  font-size: 12px;
-  line-height: calc(15 / 12);
-
-  border-radius: 8px;
-}
-
-// long version
-%btn-sec--long {
-  @extend %btn-sec;
-  width: 196px;
 }
 
 ///////////////////////
 // button tertiary
 ///////////////////////
 
-%btn-tert {
-  @extend %btn;
+@mixin btn-tert($size: '') {
+  @include btn-base();
 
-  padding: 12px 21px;
+  padding: 15px 22px;
   line-height: calc(17 / 14);
 
   color: $colorYellow;
   text-decoration: underline;
-  // background-color: transparent;
 
-  &:hover,
-  &:focus-visible {
+  $size: to-lower-case($size);
+
+  @if ($size == 'mobile') {
+    padding: 7px;
+    font-size: 12px;
+    line-height: calc(15 / 12);
+  }
+
+  &:hover {
     color: $colorGreen;
   }
-
   &:focus-visible {
-    color: white;
+    color: $colorText;
   }
-
   &:disabled {
     color: $colorBtnDisabled;
-  }
-}
-
-// mobile version
-%btn-tert--mobile {
-  @extend %btn-tert;
-
-  padding: 7px;
-
-  font-size: 12px;
-  line-height: calc(15 / 12);
-}
-
-///////////////////////
-// mixins
-///////////////////////
-
-@mixin btn-prim($size: '') {
-  $size: to-lower-case($size);
-
-  @if ($size == 'mobile') {
-    @extend %btn-prim--mobile;
-    //
-  } @else if($size == 'long') {
-    @extend %btn-prim--long;
-    //
-  } @else {
-    @extend %btn-prim;
-  }
-}
-
-@mixin btn-sec($size: '') {
-  $size: to-lower-case($size);
-
-  @if ($size == 'mobile') {
-    @extend %btn-sec--mobile;
-    //
-  } @else if($size == 'long') {
-    @extend %btn-sec--long;
-    //
-  } @else {
-    @extend %btn-sec;
-  }
-}
-
-@mixin btn-tert($size: '') {
-  $size: to-lower-case($size);
-
-  @if ($size == 'mobile') {
-    @extend %btn-tert--mobile;
-    //
-  } @else {
-    @extend %btn-tert;
   }
 }

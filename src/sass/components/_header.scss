@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 999;
 
   &__container {
     @extend .container;
@@ -17,6 +18,7 @@
     }
 
     @media screen and (min-width: 1200px) {
+      height: 95px;
       justify-content: space-between;
     }
   }
@@ -57,11 +59,11 @@
     height: 32px;
     width: 32px;
 
-    color: white;
+    color: $colorText;
 
     &:hover,
     &:focus-visible {
-      color: black;
+      color: $colorBlack;
     }
 
     @media screen and (min-width: 1200px) {
@@ -120,7 +122,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: calc(20 / 16);
-    color: white;
+    color: $colorText;
 
     &:hover,
     &:focus-visible {
