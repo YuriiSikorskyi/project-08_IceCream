@@ -67,13 +67,13 @@
   flex-direction: column;
 
   min-height: 420px;
-  padding: 123px 40px 16px 40px;
+  padding: 123px 40px 4px 40px;
   @media screen and (min-width: 768px) {
-    padding: 108px 26px 12px 26px;
+    padding: 108px 26px 0px 26px;
     min-height: 428px;
   }
   @media screen and (min-width: 1200px) {
-    padding: 165px 64px 60px 64px;
+    padding: 165px 64px 48px 64px;
     min-height: 536px;
   }
 
@@ -316,11 +316,11 @@
   background-color: transparent;
   border: none;
 
+  padding: 12px;
+  
   margin-top: auto;
   margin-left: auto;
   margin-right: auto;
-
-  display: flex;
 
   cursor: $iconCustomPointer, auto;
   
@@ -331,6 +331,6 @@
 
   .products__btn:hover &,
   .products__btn:focus & {
-    fill: white;
+    fill: $colorText;
   }
 }
