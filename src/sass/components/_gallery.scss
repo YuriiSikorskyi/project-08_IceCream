@@ -33,10 +33,6 @@
   }
 }
 
-
-
-
-
 //  .slide:nth-child(1) {
 //   background-image: url(../../images/slider/sli1-phone.jpg);
 // }
@@ -54,20 +50,16 @@
 } */
 
 @keyframes slide {
-  20% {
+  30% {
     margin-left: 0px;
   }
 
-  30% {
-    margin-left: -728px;
-  }
-
-  50% {
+  40% {
     margin-left: -728px;
   }
 
   60% {
-    margin-left: -1456px;
+    margin-left: -728px;
   }
 
   70% {
@@ -75,6 +67,10 @@
   }
 
   80% {
+    margin-left: -1456px;
+  }
+
+  90% {
     margin-left: -2184px;
   }
 
