@@ -68,6 +68,7 @@
   @if ($size == 'mobile') {
     @include btn--mobile();
   } @else if($size == 'long') {
+    padding: 11px;
     width: 196px;
   }
 
@@ -98,6 +99,7 @@
   @if ($size == 'mobile') {
     @include btn--mobile();
   } @else if($size == 'long') {
+    padding: 11px;
     width: 196px;
   }
 
