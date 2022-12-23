@@ -7,7 +7,6 @@
     }
 }
 .uppertitle {
-    font-family: $mainFontFamily;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.22;
@@ -18,7 +17,6 @@
     @media screen and (min-width: 768px) {
         font-weight: 800;
         font-size: 22px;
-        letter-spacing: 0.04em;
     }
     @media screen and (min-width: 1200px) {
         font-size: 30px;
@@ -32,7 +30,6 @@
     font-size: 30px;
     line-height: 1.26;
     text-align: center;
-    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $colorWhite;
     display: block;
@@ -108,12 +105,10 @@
 
 
 .production__text {
-    font-family: $mainFontFamily;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.75;
-    letter-spacing: 0.04em;
     color: $colorWhite;
     margin: 0 auto 4px auto;
 
@@ -134,30 +129,27 @@
     }
 }
 .production__information {
-    font-family: $mainFontFamily;
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
     line-height: 1.58;
     color: $colorWhite;
     margin: 0 auto 10px auto;
     
     @media screen and (max-width: 479px) {
         width: 220px;
+        font-size: 12px;
     }
 
     @media screen and (max-width: 767px) {
         text-align: center;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (max-width: 1199px) {
         line-height: 1.75;
         width: 334px;
         margin-bottom: 8px;
     }
     @media screen and (min-width: 1200px) {
-        font-size: 14px;
-        line-height: 1.92;
         width: 463px;
     }
 }
@@ -165,12 +157,9 @@
     display: none;
     @media screen and (min-width: 768px) {
         display: block;
-        font-family: $mainFontFamily;
         font-style: normal;
         font-weight: 400;
         font-size: 12px;
-        line-height: 1.92;
-        letter-spacing: 0.04em;
         color: $colorWhite;
         width: 336px;
         margin-bottom: 32px;
@@ -211,7 +200,7 @@
     margin-left: 7px;
     @media screen and (min-width: 768px) {
         &:focus {
-            fill: #FCFCFC;
+            fill: $colorWhite;
         }
     }
 }
