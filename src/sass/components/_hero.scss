@@ -165,6 +165,7 @@
 
   font-size: 12px;
   line-height: calc(17 / 12);
+  color: $colorText;
 
   @media screen and(max-width: 767.98px) {
     display: none;
@@ -218,6 +219,7 @@
   font-size: 8px;
   line-height: calc(10 / 8);
   text-align: right;
+  color: $colorText;
 
   @media screen and(min-width: 1200px) {
     right: 16px;
