@@ -1,4 +1,7 @@
 .section-contacts{
+			@media screen and (max-width:767px) {
+					padding-top: 20px;
+				}
     position: relative;
     &::after {
             content: '';
@@ -47,13 +50,19 @@
     }
 }
 .list-contacts{
+
+						@include cardset(1, 16px);
     @media screen and (min-width:768px) {
          @include cardset(3, 16px);
     }
+				 @media screen and (min-width:1200px) {
+				 	@include cardset(3, 32px);
+				 }
 }
+
 .list-contacts__item {
     padding: 40px 24px;
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
 
     background-color: $colorText;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
@@ -133,11 +142,21 @@
     @media screen and (max-width:767.98px) {
         flex-direction: column;
     }
-    
+
+				margin-top: 20px;
+		    @media screen and (min-width: 768px) {
+		    	margin-top: 40px;
+		    }
+								@media screen and (min-width: 1200px) {
+									margin-top: 60px;
+								}
 }
 .button-location{
-    margin-top: 20px;
-    margin-bottom: 16px;
+
+						// @media screen and (min-width:768px) {
+						//      @include cardset(3, 16px);
+						// }
+    // margin-bottom: 16px;
     @include btn-prim('long');
 }
 .button-franchise{
