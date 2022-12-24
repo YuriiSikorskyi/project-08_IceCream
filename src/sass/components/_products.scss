@@ -308,16 +308,17 @@
 .products__btn {
   @extend %btn;
 
-  padding: 12px;  
-  margin-top: auto;  
-  
+  padding: 12px;
+  margin-top: auto;
+
+  color: #131313; // $colorBlack
+
+  &:hover,
+  &:focus-visible {
+    color: $colorText;
+  }
 }
 
 .products__icon {
-    fill: #131313;
-
-  .products__btn:hover &,
-  .products__btn:focus & {
-    fill: $colorText;
-  }
+  fill: currentColor;
 }
