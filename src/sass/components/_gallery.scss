@@ -1,122 +1,65 @@
-.slide {
-  position: absolute;
-  left: 50%;
-  right: 50%;
-  text-align: center;
-  overflow: hidden;
-  height: 130px;
-  width: 280px;
-  margin: 0 auto;
-  z-index: 10;
-  border-radius: 24px;
+.gallery {
+	padding-bottom: 20px;
+	background-image: linear-gradient(to bottom,
+			rgba(132, 161, 120, 1) 25%,
+			rgba(132, 161, 120, 0) 25%,
+		);
 
-  background-repeat: no-repeat;
-  background-size: cover;
+	@media screen and (min-width: 768px) {
+		padding-bottom: 40px;
+	}
 
-  background-position: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-
-  -webkit-animation: imagesFading 8s infinite;
-  -moz-animation: imagesFading 8s infinite;
-  -o-animation: imagesFading 8s infinite;
-  animation: imagesFading 8s infinite;
-
+	@media screen and (min-width: 1200px) {
+		padding-bottom: 50px;
+	}
 }
 
-@media screen and (min-width: 768px) {
-  .slide {
-    height: 327px;
-    width: 704px;
-  }
+.gallery-container {
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	@media screen and (min-width: 768px) {
+		width: 768px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 1200px;
+		padding-left: 80px;
+		padding-right: 80px;
+	}
 }
 
-@media screen and (min-width: 1200px) {
-  .slide {
-    height: 422px;
-    width: 1013px;
-  }
+.slider__image {
+	width: 100%;
+
+	@media screen and (max-width: 479.98px) {
+		border-radius: 12px;
+	}
+
+	@media screen and (min-width: 480px) {
+		border-radius: 18px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		border-radius: 30px;
+	}
 }
 
-.slide1 {
-  background-image: url('./images/slider/sli1-desktop.jpg');
-  animation-delay: 6s;
+//  .slide:nth-child(1) {
+//   background-image: url(../../images/slider/sli1-phone.jpg);
+// }
+/*
+.slide:nth-child(2) {
+  background-image: url(../../images/slider/sli1-phone.jpg);
 }
 
-@media (min-device-pixel-ratio: 2),
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-  .slide1 {
-    background-image: url('./images/slider/sli1-desktop@2x.jpg');
-  }
+.slide:nth-child(3) {
+  background-image: url(../../images/slider/sli1-phone.jpg);;
 }
 
-.slide2 {
-  background-image: url('./images/slider/sli2-desktop.jpg');
-  animation-delay: 4s;
-}
-
-@media (min-device-pixel-ratio: 2),
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-  .slide2 {
-    background-image: url('./images/slider/sli2-desktop@2x.jpg');
-  }
-}
-
-.slide3 {
-  background-image: url('./images/slider/sli3-desktop.jpg');
-
-  animation-delay: 2s;
-}
-
-@media (min-device-pixel-ratio: 2),
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-  .slide3 {
-    background-image: url('./images/slider/sli3-desktop@2x.jpg');
-  }
-}
-
-.slide4 {
-  background-image: url('./images/slider/sli2-desktop.jpg');
-  animation-delay: 0s;
-}
-
-@media (min-device-pixel-ratio: 2),
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi),
-(min-resolution: 2dppx) {
-  .slide4 {
-    background-image: url('./images/slider/sli2-desktop@2x.jpg');
-  }
-}
-
-
-@keyframes imagesFading {
-  0% {
-    opacity: 1;
-  }
-
-  17% {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0;
-  }
-
-  92% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
+.slide:nth-child(4) {
+  background-image: url(../../images/slider/sli1-phone.jpg);
+} */
