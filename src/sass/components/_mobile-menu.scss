@@ -25,9 +25,11 @@
     // background-color: #97af8d;
   }
 
-  opacity: 1;
-  visibility: visible;
-  @include transition(opacity, visibility);
+  //opacity: 1;
+  //visibility: visible;
+  //@include transition(opacity, visibility);
+  transform: translateX(0);
+  @include transition(transform);
 
   @media screen and (min-width: 1200px) {
     display: none;
@@ -36,7 +38,8 @@
   &--hidden {
     // плейсхолдером делать нельзя - стоит в итоговом css выше
     // и перебивается .mobile-menu {...}
-    @include hidden;
+    //@include hidden;
+    transform: translateX(100%);
   }
 }
 
