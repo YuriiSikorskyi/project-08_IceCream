@@ -183,29 +183,4 @@
         margin: 0 auto;
     }
 
-    @media screen and (min-width: 768px) {
-        &:hover {
-            background-color: $colorGreen;
-            border-color: $colorGreen;
-        }
-        &:focus {
-            background-color: $colorGreen;
-            color: $colorWhite;
-            border-color: $colorGreen;
-        }
-        &:disabled {
-            background-color: $colorBtnDisabled;
-            border-color: $colorBtnDisabled;
-        }
-    }
-}
-
-.production__arrow {
-    fill: #000000;
-    margin-left: 7px;
-    @media screen and (min-width: 768px) {
-        &:focus {
-            fill: $colorWhite;
-        }
-    }
 }
