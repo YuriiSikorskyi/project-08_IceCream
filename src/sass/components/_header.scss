@@ -6,9 +6,10 @@
   z-index: 999;
 
   &--shaded {
-    @include transition(background-color);
+    border-bottom: 1px solid rgba($colorWhite, 0.2);
     background-color: rgba($colorBackground, 0.9);
     backdrop-filter: blur(3px);
+    @include transition(background-color);
 
     .header__container {
       @media screen and (min-width: 320px) {
@@ -16,11 +17,14 @@
       }
 
       @media screen and (min-width: 768px) {
-        height: 60px;
+        height: 55px;
       }
 
       @media screen and (min-width: 1200px) {
-        height: 70px;
+        .header__logo {
+          width: 44px;
+          height: 43px;
+        }
       }
     }
   }
