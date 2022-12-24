@@ -7,19 +7,19 @@
 
   @media screen and(min-width: 320px) {
     min-width: 320px;
-    max-width: 320px;
+    //max-width: 320px;
   }
 
   @media screen and(min-width: 768px) {
     padding-top: 83px;
     min-width: 768px;
-    max-width: 768px;
+    //max-width: 768px;
     height: 415px;
   }
 
   @media screen and(min-width: 1200px) {
     padding-top: 120px;
-    max-width: 1200px;
+    //max-width: 1200px;
     min-width: 1200px;
     height: 664px;
   }

@@ -1,26 +1,44 @@
 .header {
-  // background-color: $colorBackground;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 999;
 
-  &__container {
-    @extend .container;
+  &--shaded {
+    background-color: rgba($colorBackground, 0.9);
+    backdrop-filter: blur(3px);
 
-    display: flex;
-    align-items: center;
-    height: 60px;
+    .header__container {
+      @media screen and (min-width: 320px) {
+        height: 50px;
+      }
 
-    @media screen and (min-width: 768px) {
-      height: 86px;
+      @media screen and (min-width: 768px) {
+        height: 60px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        height: 70px;
+      }
     }
+  }
+}
 
-    @media screen and (min-width: 1200px) {
-      height: 95px;
-      justify-content: space-between;
-    }
+.header__container {
+  @extend .container;
+
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  @media screen and (min-width: 768px) {
+    height: 86px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 95px;
+    justify-content: space-between;
   }
 }
 
@@ -29,7 +47,6 @@
 //////////////////////
 
 .header__logo {
-  display: block;
   width: 40px;
   height: 39px;
 
@@ -54,7 +71,6 @@
   &__btn-menu {
     @extend %btn;
 
-    padding: 0;
     margin-left: auto;
     height: 32px;
     width: 32px;
