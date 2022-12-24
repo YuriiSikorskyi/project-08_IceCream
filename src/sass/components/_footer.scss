@@ -100,16 +100,16 @@
     border-radius: 50%;
     color: $colorBackground;
     background-color: $colorYellow;
+
+    &:hover,
+    &:focus-visible {
+      color: $colorText;
+    }
   }
 }
 
 .foot-contacts-icon {
   fill: currentColor;
-
-  .foot-contacts__link:hover &,
-  .foot-contacts__link:focus & {
-    color: $colorText;
-  }
 }
 
 .foot-contacts__tel {
@@ -130,7 +130,7 @@
 
   &--link {
     @extend %link;
-    
+
     color: $colorText;
 
     &:hover, &:focus {
