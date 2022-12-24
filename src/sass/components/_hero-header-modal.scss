@@ -1,0 +1,360 @@
+// backdrop {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+
+//   background-color: rgba(0, 0, 0, 0.2);
+
+//   z-index: 100;
+
+//   transition: opacity var(--animate), visibility var(--animate);
+// }
+
+// .backdrop.is-hidden {
+//   opacity: 0;
+//   pointer-events: none;
+//   visibility: hidden;
+// }
+
+.header_modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @media screen and (max-width: 768px) {
+    width: 95%;
+    max-width: 280px;
+    height: 95%;
+    max-height: 991px;
+    overflow: scroll;
+    padding: 28px;
+  }
+  @media screen and (min-width: 769px) {
+    max-width: 568px;
+    max-height: 644px;
+    padding: 32px 54px;
+  }
+
+  background: #fcfcfc;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+}
+.button__close {
+  position: absolute;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  background-color: #fcfcfc;
+  border: none;
+}
+.button__close-icon {
+  fill: #131313;
+}
+.buy__title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  // Змінна
+  color: #131313;
+}
+.buy__title--distance {
+  margin-bottom: 83px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 103px;
+  }
+}
+.buy__list {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 82px;
+  }
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
+  // Змінна
+  list-style: none;
+}
+.buy__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 135px;
+  padding: 96px 13px 20px 13px;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  border-radius: 15px;
+  width: 132px;
+}
+.buy__item--cream {
+  // Змінна
+  border: 2px solid #96af8c;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+.buy__item--coffee {
+  // Змінна
+  background: #efd478;
+  border: 2px solid #efd478;
+}
+.buy__item--milkshakes {
+  // Змінна
+  border: 2px solid #d6936d;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+}
+%before {
+  z-index: 2;
+  position: absolute;
+  content: '';
+  width: 132px;
+  height: 132px;
+  left: 50%;
+  top: -66px;
+  transform: translateX(-50%);
+  border-radius: 98px;
+}
+.buy__item--cream::before {
+  @extend %before;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+  }
+}
+.buy__item--coffee::before {
+  @extend %before;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+  }
+  @media screen and (min-width: 1200px) {
+    box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+  }
+}
+.buy__item--milkshakes::before {
+  @extend %before;
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+  @media screen and (min-width: 768px) {
+    box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+  }
+  @media screen and (min-width: 1200px) {
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+%after {
+  z-index: 3;
+  position: absolute;
+  content: '';
+  width: 132px;
+  height: 132px;
+  left: 50%;
+  top: -73px;
+  transform: translateX(-50%);
+  border-radius: 98px;
+}
+.buy__item--cream::after {
+  @extend %after;
+  // Mobile and Tablet
+  background: url(../images/modal-buy-now/cream.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/modal-buy-now/cream@2x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  // Desktop
+  @media screen and (min-width: 1200px) {
+    background: url(../images/modal-buy-now/cream.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/modal-buy-now/cream@2x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.buy__item--coffee::after {
+  @extend %after;
+  background: url(../images/modal-buy-now/cofee.jpg);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/modal-buy-now/cofee@2x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  // Desktop
+  @media screen and (min-width: 1200px) {
+    background: url(../images/modal-buy-now/cofee.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/modal-buy-now/cofee@2x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.buy__item--milkshakes::after {
+  @extend %after;
+  background: url(../images/modal-buy-now/milkshakes.jpg);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/modal-buy-now/milkshakes@2x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  // Desktop
+  @media screen and (min-width: 1200px) {
+    background: url(../images/modal-buy-now/milkshakes.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/modal-buy-now/milkshakes@2x.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+.buy__subtitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  // Змінна
+  color: #131313;
+  font-family: 'Montserrat';
+}
+
+// Форма
+.modal-form__group {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+}
+
+.modal-form__field {
+  @media screen and (max-width: 767px) {
+    width: 224px;
+    height: 32px;
+    padding: 8px 12px;
+  }
+  @media screen and (min-width: 767px) {
+    width: 368px;
+    height: 42px;
+    padding: 11px 16px;
+  }
+
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1, 4;
+
+  color: #131313;
+}
+.modal-form__field--comment {
+  @media screen and (max-width: 767px) {
+    width: 224px;
+    height: 65px;
+  }
+  @media screen and (min-width: 767px) {
+    width: 368px;
+    height: 84px;
+  }
+
+  padding: 8px 12px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1, 4;
+
+  color: #131313;
+}
+.btn {
+  display: block;
+  padding: 12px 34px;
+  background: #f8d24e;
+  border-radius: 10px;
+  border: none;
+  @media screen and (max-width: 767px) {
+    margin-top: 26px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+  }
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+
+  color: #131313;
+}

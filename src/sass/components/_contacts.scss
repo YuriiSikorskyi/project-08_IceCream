@@ -6,7 +6,7 @@
             top: 448px;
             left: 0;
             width: 100%;
-            height: 72%;
+            height: 75%;
             background-color: $colorBackground;
             z-index: -1;
         }
@@ -14,13 +14,13 @@
         @media screen and (min-width: 768px) {
             &::after{
                 top: 359px;
-                height: 46%;
+                height: 56%;
             }
     }
 
         @media screen and (min-width: 1200px) {
             &::after {
-                    height: 70%;
+                    height: 78%;
                     top: 200px;
             }
     

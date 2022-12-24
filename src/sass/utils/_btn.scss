@@ -6,6 +6,8 @@
   font-family: inherit;
   text-decoration: none;
   cursor: $iconCustomPointer, auto;
+
+  @include transition(color);
 }
 
 ///////////////////////
@@ -13,13 +15,19 @@
 ///////////////////////
 
 %btn {
-  display: block;
+  // display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding: 0;
 
   background-color: transparent;
   border-style: none;
 
   cursor: $iconCustomPointer, auto; //pointer
+
+  @include transition(color);
 }
 
 @mixin btn-base() {
@@ -42,6 +50,9 @@
 
   // button icon
   svg {
+    // margin: 0;
+    width: 6px;
+    height: 10px;
     fill: currentColor;
   }
 }
@@ -82,6 +93,8 @@
   &:disabled {
     background-color: $colorBtnDisabled;
   }
+
+  @include transition(color, background-color);
 }
 
 ///////////////////////
@@ -113,6 +126,8 @@
   &:disabled {
     border-color: $colorBtnDisabled;
   }
+
+  @include transition(border-color, color, background-color);
 }
 
 ///////////////////////
@@ -145,4 +160,6 @@
   &:disabled {
     color: $colorBtnDisabled;
   }
+
+  @include transition(color);
 }

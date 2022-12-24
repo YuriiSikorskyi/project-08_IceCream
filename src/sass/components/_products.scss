@@ -1,30 +1,42 @@
-.products {
-  font-family: 'Montserrat';
-  font-style: normal;
+.products {  
   color: #131313;
+  
 }
 .products__label {
   font-weight: 800;
-  font-size: 30px;
-  line-height: 1.23;
+  font-size: 18px;
+  line-height: 1.22;
 
-  text-align: center;
-  letter-spacing: 0.04em;
+  text-align: center;  
   text-transform: uppercase;
+
+  
+  
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
 
 }
 .products__title {
   font-family: 'Seymour One';
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.25;
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 34px;
+  }
 
   @media screen and (min-width: 1200px) {
     letter-spacing: 0.06em;
+    font-size: 36px;
   }
 }
 
@@ -65,15 +77,15 @@
 
   justify-content: flex-end;
   flex-direction: column;
-
+  
   min-height: 420px;
-  padding: 123px 40px 16px 40px;
+  padding: 123px 40px 4px 40px;
   @media screen and (min-width: 768px) {
-    padding: 108px 26px 12px 26px;
+    padding: 108px 26px 0px 26px;
     min-height: 428px;
   }
   @media screen and (min-width: 1200px) {
-    padding: 165px 64px 60px 64px;
+    padding: 165px 64px 48px 64px;
     min-height: 536px;
   }
 
@@ -92,17 +104,17 @@
 
 .products__item--cream {
   
-  background-color: #aec6a5;
+  background-color: $colorProduktsCream;
 }
 
 .products__item--coffee {
   
-  background: #efd478;
+  background: $colorProduktsCoffee;
 }
 
 .products__item--milkshakes {
   
-  background: #d6936d;
+  background: $colorProduktsCoffeeMilkshakes;
 }
 
 %before {
@@ -288,8 +300,16 @@
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    line-height: 1.23;
+    font-size: 22px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+  }
 
 }
 
@@ -306,31 +326,32 @@
   font-size: 14px;
   line-height: 176%;
   text-align: center;
-  letter-spacing: 0.04em;
+  
+  @media screen and (min-width: 768px) {
+    line-height: 1.79;
+  }
 
-  color: #131313;
-  font-family: 'Montserrat';
-}
-
-.products__btn {
-  background-color: transparent;
-  border: none;
-
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-
-  display: flex;
-
-  cursor: $iconCustomPointer, auto;
+  @media screen and (min-width: 1200px) {
+    line-height: 1.75;
+    font-size: 16px;
+  }
   
 }
 
-.products__icon {
-    fill: #131313;
+.products__btn {
+  @extend %btn;
 
-  .products__btn:hover &,
-  .products__btn:focus & {
-    fill: white;
+  padding: 12px;
+  margin-top: auto;
+
+  color: #131313; // $colorBlack
+
+  &:hover,
+  &:focus-visible {
+    color: $colorText;
   }
+}
+
+.products__icon {
+  fill: currentColor;
 }

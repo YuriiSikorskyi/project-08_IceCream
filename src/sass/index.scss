@@ -3,9 +3,9 @@
 // utils styles
 @import './utils/variables';
 @import './utils/visually-hidden';
+@import './utils/misc';
 @import './utils/btn';
 @import './utils/cardset';
-@import './utils/misc';
 
 // base styles
 @import './base/base';
@@ -18,6 +18,8 @@
 @import './components/header';
 @import './components/hero';
 @import './components/logo';
+@import './components/mobile-menu';
+@import './components/scroll-off';
 @import './components/products';
 @import './components/about';
 @import './components/advantages';
@@ -26,3 +28,5 @@
 @import './components/contacts';
 @import './components/footer';
 @import './components/modal';
+// @import './components/hero-header-modal';
+// @import './components/products-modal';

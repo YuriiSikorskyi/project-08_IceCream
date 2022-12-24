@@ -5,21 +5,21 @@
 
   background-color: $colorBackground;
 
-  @media screen and(min-width: 320px) {
+  @media screen and (min-width: 320px) {
     min-width: 320px;
-    max-width: 320px;
+    //max-width: 320px;
   }
 
-  @media screen and(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     padding-top: 83px;
     min-width: 768px;
-    max-width: 768px;
+    //max-width: 768px;
     height: 415px;
   }
 
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     padding-top: 120px;
-    max-width: 1200px;
+    //max-width: 1200px;
     min-width: 1200px;
     height: 664px;
   }
@@ -48,7 +48,7 @@
     background-size: 177px 217px, 100% 50px;
   }
 
-  @media screen and(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     background-image: url('../images/hero/icecream-plate-tablet.png'),
       url('../images/hero/icecream-cone-tablet.png'),
       url('../images/hero/hero-dots-tablet.svg');
@@ -64,7 +64,7 @@
     }
   }
 
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     background-image: url('../images/hero/icecream-plate-desktop.png'),
       url('../images/hero/icecream-cone-desktop.png'),
       url('../images/hero/hero-dots-desktop.svg');
@@ -97,13 +97,13 @@
   color: $colorText;
 
   &-accent {
-    @media screen and(max-width: 1199.98px) {
+    @media screen and (max-width: 1199.98px) {
       font-size: 34px;
       line-height: calc(33 / 34);
     }
   }
 
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: 367px;
     font-size: 38px;
     line-height: calc(48 / 38);
@@ -120,11 +120,11 @@
   align-items: center;
   margin-top: 32px;
 
-  @media screen and(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     margin-top: 24px;
   }
 
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     margin-top: 28px;
   }
 }
@@ -133,7 +133,7 @@
   &__btn-prods {
     @include btn-sec('mobile');
 
-    @media screen and(min-width: 1200px) {
+    @media screen and (min-width: 1200px) {
       @include btn-sec();
     }
   }
@@ -143,7 +143,7 @@
   &__btn-him {
     @include btn-tert('mobile');
 
-    @media screen and(min-width: 1200px) {
+    @media screen and (min-width: 1200px) {
       @include btn-tert();
     }
   }
@@ -167,11 +167,11 @@
   line-height: calc(17 / 12);
   color: $colorText;
 
-  @media screen and(max-width: 767.98px) {
+  @media screen and (max-width: 767.98px) {
     display: none;
   }
 
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     gap: 24px;
     margin-left: 247px;
     margin-top: 109px;
@@ -204,7 +204,7 @@
 ///////////////////////
 
 .hero__meter {
-  @media screen and(max-width: 767.98px) {
+  @media screen and (max-width: 767.98px) {
     display: none;
   }
 
@@ -221,7 +221,7 @@
   text-align: right;
   color: $colorText;
 
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     right: 16px;
     font-size: 14px;
     line-height: calc(17 / 14);
@@ -239,7 +239,7 @@
   text-transform: uppercase;
   color: $colorBlack;
 
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 46px;
     line-height: calc(56 / 46);
   }

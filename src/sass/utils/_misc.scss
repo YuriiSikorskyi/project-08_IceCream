@@ -5,3 +5,15 @@
     @content;
   }
 }
+
+@mixin hidden() {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+@mixin transition($props...) {
+  transition-duration: $mainTransDur;
+  transition-timing-function: $mainTransFunc;
+  transition-property: $props;
+}

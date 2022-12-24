@@ -6,17 +6,25 @@ $colorWhite: #fcfcfc;
 $colorBackground: #84a178;
 $colorText: $colorWhite;
 $colorBtnDisabled: #ababab;
+$colorProduktsCream: #aec6a5;
+$colorProduktsCoffee: #efd478;
+$colorProduktsCoffeeMilkshakes: #d6936d;
+
 
 // font
 $mainFontFamily: 'Montserrat', sans-serif;
+$secondaryFontFamily: 'Seymour One', sans-serif;
 $mainFontSize: 14px;
 $mainLineHeight: calc(27 / 14);
 
 // misc
 $iconCustomPointer: url(../images/cursor.svg);
-
 $breakpoints: (
   'phone': 320px,
   'tablet': 768px,
   'desktop': 1200px,
 );
+
+// animation
+$mainTransDur: 250ms;
+$mainTransFunc: cubic-bezier(0.4, 0, 0.2, 1);
