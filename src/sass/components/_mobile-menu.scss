@@ -16,18 +16,14 @@
   padding-bottom: 64px;
 
   overflow: auto;
-  background-color: $colorBackground; //#85a279;
+  background-color: $colorBackground;
 
   @media screen and (min-width: 768px) {
     padding-top: 20px;
     padding-left: 32px;
     padding-right: 32px;
-    // background-color: #97af8d;
   }
 
-  //opacity: 1;
-  //visibility: visible;
-  //@include transition(opacity, visibility);
   transform: translateX(0);
   @include transition(transform);
 
@@ -36,9 +32,6 @@
   }
 
   &--hidden {
-    // плейсхолдером делать нельзя - стоит в итоговом css выше
-    // и перебивается .mobile-menu {...}
-    //@include hidden;
     transform: translateX(100%);
   }
 }
