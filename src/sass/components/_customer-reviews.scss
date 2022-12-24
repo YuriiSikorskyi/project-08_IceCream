@@ -1,5 +1,4 @@
 .customer {
-    position: relative;
 	padding-top: 40px;
 	padding-bottom: 20px;
 
@@ -58,7 +57,6 @@
     }
 }
 .swiper-slide__text {
-	font-family: $mainFontFamily;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -68,7 +66,6 @@
 
     @media screen and (min-width: 768px) {
     font-weight: 500;
-    font-size: $mainFontSize;
     line-height: 186%;
     }
     @media screen and (min-width: 1200px) {
@@ -76,7 +73,6 @@
     }
 }
 .swiper-slide__title {
-    font-family: $mainFontFamily;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
