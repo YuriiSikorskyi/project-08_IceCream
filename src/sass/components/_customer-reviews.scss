@@ -45,14 +45,14 @@
 }
 
 .swiper-slide__wrapper {
-	display: flex;
-	align-items: center;
-	width: 95%;
-	background-color: $colorBackground;
-	border-radius: 10px;
-	margin: 0 auto;
-	margin-bottom: 32px;
-	padding: 35 39px;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    background-color: $colorBackground;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    padding: 35 39px;
 
 	@media screen and (max-width: 767.98px) {
 		min-height: 258px;
@@ -67,33 +67,29 @@
 }
 
 .swiper-slide__text {
-	font-family: $mainFontFamily;
-	font-style: normal;
-	font-weight: 400;
-	font-size: 12px;
-	line-height: 255%;
-	text-align: center;
-	color: $colorWhite;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 255%;
+    text-align: center;
+    color: $colorWhite;
 
-	@media screen and (min-width: 768px) {
-		font-weight: 500;
-		font-size: $mainFontSize;
-		line-height: 186%;
-	}
-
-	@media screen and (min-width: 1200px) {
-		font-size: 16px;
-	}
+    @media screen and (min-width: 768px) {
+    font-weight: 500;
+    line-height: 186%;
+    }
+    @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    }
 }
 
 .swiper-slide__title {
-	font-family: $mainFontFamily;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 186%;
-	text-align: center;
-	color: $colorBlack;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 186%;
+    text-align: center;
+    color: $colorBlack;
 }
 
 .swiper-pagination {
@@ -103,9 +99,9 @@
 }
 
 .swiper-pagination-bullet {
-	display: inline-block;
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	background: $colorBackground;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $colorBackground;
 }
