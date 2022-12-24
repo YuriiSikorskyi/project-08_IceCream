@@ -1,57 +1,71 @@
-<div class="backdrop is-hidden">
+<div class="modal" data-modal="4">
   <div class="header_modal">
-    <button class="button__close" type="button">
+    <button class="button__close--hero js-modal-close" type="button">
       <svg class="button__close-icon" width="11" height="11">
         <use href="./images/icons.svg#icon-modal-close"></use>
       </svg>
     </button>
 
-    <h3 class="buy__title buy__title--distance">Buy now</h3>
-    <ul class="buy__list">
-      <li class="buy__item buy__item--cream">
-        <h3 class="buy__subtitle">ice cream</h3>
+    <h3 class="hero-modal__title hero-modal--distance">Buy now</h3>
+    <ul class="hero-modal__list">
+      <li class="hero-modal__item hero-modal__item--cream">
+        <h3 class="hero-modal__subtitle">ice cream</h3>
       </li>
-      <li class="buy__item buy__item--coffee">
-        <h3 class="buy__subtitle">ice coffee</h3>
+      <li class="hero-modal__item hero-modal__item--coffee">
+        <h3 class="hero-modal__subtitle">ice coffee</h3>
       </li>
-      <li class="buy__item buy__item--milkshakes">
-        <h3 class="buy__subtitle">milkshakes</h3>
+      <li class="hero-modal__item hero-modal__item--milkshakes">
+        <h3 class="hero-modal__subtitle">milkshakes</h3>
       </li>
     </ul>
 
-    <form name="modal-form">
-      <div class="modal-form__group" role="group">
-        <label class="modal-form__label" for="user_name">
-          <input
-            class="modal-form__field"
-            type="text"
-            id="user_name"
-            name="user_name"
-            required
-            placeholder="Name"
-          />
-        </label>
-        <label class="modal-form__label" for="user_phone">
-          <input
-            class="modal-form__field"
-            type="tel"
-            id="user_phone"
-            name="user_phone"
-            required
-            placeholder="Phone"
-          />
-        </label>
-        <label class="modal-form__label" for="comment">
-          <textarea
-            class="modal-form__field--comment"
-            name="comment"
-            rows="6"
-            placeholder="Comment"
-            id="comment"
-          ></textarea>
-        </label>
+    <form class="modal__form modal-form-hero__group">
+          <div class="modal__group" role="group">
+            <label class="modal__label" for="name"></label>
+            <div class="wrapper__input">
+              <input
+                class="input__form"
+                type="text"
+                name="user_name"
+                id="name"
+                autofocus
+                required
+                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                title="Name"
+                placeholder="Name"
+              />
+            </div>
+          </div>
+
+          <div class="modal__group" role="group">
+            <label class="modal__label" for="phone"></label>
+            <div class="wrapper__input">
+              <input
+                class="input__form"
+                type="tel"
+                name="user_phone"
+                id="phone"
+                required
+                placeholder="Phone"
+              />
+            </div>
+          </div>
+
+          <div class="modal__group modal__comment" role="group">
+            <label class="modal__label" for="comment"></label>
+            <textarea
+              class="comment"
+              name="comment"
+              id="comment"
+              rows="4"
+              placeholder="Comment here..."
+            ></textarea>
+          </div>
+          <button class="btn-sec btn-prim__franc" type="submit">Submit</button>
+        </form>
       </div>
-    </form>
-    <button class="btn" type="submit">Submit</button>
+    </div>
   </div>
 </div>
+
+<div class="overlay js-overlay-modal"></div>
