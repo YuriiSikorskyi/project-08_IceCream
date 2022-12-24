@@ -1,6 +1,4 @@
-.products {
-  font-family: 'Montserrat';
-  font-style: normal;
+.products {  
   color: #131313;
 }
 .products__label {
@@ -8,8 +6,7 @@
   font-size: 30px;
   line-height: 1.23;
 
-  text-align: center;
-  letter-spacing: 0.04em;
+  text-align: center;  
   text-transform: uppercase;
 
 }
@@ -17,14 +14,14 @@
   font-family: 'Seymour One';
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.25;
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
 
   @media screen and (min-width: 1200px) {
     letter-spacing: 0.06em;
+    font-size: 36px;
   }
 }
 
@@ -92,17 +89,17 @@
 
 .products__item--cream {
   
-  background-color: #aec6a5;
+  background-color: $colorProduktsCream;
 }
 
 .products__item--coffee {
   
-  background: #efd478;
+  background: $colorProduktsCoffee;
 }
 
 .products__item--milkshakes {
   
-  background: #d6936d;
+  background: $colorProduktsCoffeeMilkshakes;
 }
 
 %before {
@@ -288,7 +285,6 @@
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
 
 }
@@ -303,26 +299,17 @@
 
 .products__text {
   font-weight: 400;
-  font-size: 14px;
   line-height: 176%;
   text-align: center;
-  letter-spacing: 0.04em;
-
-  color: #131313;
-  font-family: 'Montserrat';
+  
+  
 }
 
 .products__btn {
-  background-color: transparent;
-  border: none;
+  @extend %btn;
 
-  padding: 12px;
-  
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-
-  cursor: $iconCustomPointer, auto;
+  padding: 12px;  
+  margin-top: auto;  
   
 }
 
