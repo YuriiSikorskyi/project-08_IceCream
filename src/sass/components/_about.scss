@@ -69,6 +69,7 @@
     height: 278px;
 
     @media screen and (min-width: 768px) {
+        margin: 0 38px 62px auto;
         width: 330px;
         height: 330px;
     }
@@ -166,12 +167,12 @@
         font-weight: 400;
         font-size: 12px;
         color: $colorWhite;
-        width: 336px;
+        width: 300px;
         margin-bottom: 32px;
     }
     @media screen and (min-width: 1200px) {
         font-size: 14px;
-        width: 457px;
+        width: 437px;
         margin-bottom: 54px;
     }
 }
