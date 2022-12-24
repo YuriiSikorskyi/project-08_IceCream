@@ -90,22 +90,25 @@
   }
 
   &__link {
+    @extend %link;
+
     width: 34px;
     height: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    color: $colorBackground;
     background-color: $colorYellow;
   }
 }
 
 .foot-contacts-icon {
-  fill: $colorBackground;
+  fill: currentColor;
 
   .foot-contacts__link:hover &,
   .foot-contacts__link:focus & {
-  fill: $colorText;
+    color: $colorText;
   }
 }
 
@@ -126,7 +129,9 @@
   }
 
   &--link {
-  color: $colorText;
+    @extend %link;
+    
+    color: $colorText;
 
     &:hover, &:focus {
       color: $colorYellow;
