@@ -1,0 +1,65 @@
+.gallery {
+	padding-bottom: 20px;
+	background-image: linear-gradient(to bottom,
+			rgba(132, 161, 120, 1) 25%,
+			rgba(132, 161, 120, 0) 25%,
+		);
+
+	@media screen and (min-width: 768px) {
+		padding-bottom: 40px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding-bottom: 50px;
+	}
+}
+
+.gallery-container {
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	@media screen and (min-width: 768px) {
+		width: 768px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		width: 1200px;
+		padding-left: 80px;
+		padding-right: 80px;
+	}
+}
+
+.slider__image {
+	width: 100%;
+
+	@media screen and (max-width: 479.98px) {
+		border-radius: 12px;
+	}
+
+	@media screen and (min-width: 480px) {
+		border-radius: 18px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		border-radius: 30px;
+	}
+}
+
+//  .slide:nth-child(1) {
+//   background-image: url(../../images/slider/sli1-phone.jpg);
+// }
+/*
+.slide:nth-child(2) {
+  background-image: url(../../images/slider/sli1-phone.jpg);
+}
+
+.slide:nth-child(3) {
+  background-image: url(../../images/slider/sli1-phone.jpg);;
+}
+
+.slide:nth-child(4) {
+  background-image: url(../../images/slider/sli1-phone.jpg);
+} */
