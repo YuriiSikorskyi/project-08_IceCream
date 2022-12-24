@@ -1,0 +1,57 @@
+<div class="backdrop is-hidden">
+  <div class="header_modal">
+    <button class="button__close" type="button">
+      <svg class="button__close-icon" width="11" height="11">
+        <use href="./images/icons.svg#icon-modal-close"></use>
+      </svg>
+    </button>
+
+    <h3 class="buy__title buy__title--distance">Buy now</h3>
+    <ul class="buy__list">
+      <li class="buy__item buy__item--cream">
+        <h3 class="buy__subtitle">ice cream</h3>
+      </li>
+      <li class="buy__item buy__item--coffee">
+        <h3 class="buy__subtitle">ice coffee</h3>
+      </li>
+      <li class="buy__item buy__item--milkshakes">
+        <h3 class="buy__subtitle">milkshakes</h3>
+      </li>
+    </ul>
+
+    <form name="modal-form">
+      <div class="modal-form__group" role="group">
+        <label class="modal-form__label" for="user_name">
+          <input
+            class="modal-form__field"
+            type="text"
+            id="user_name"
+            name="user_name"
+            required
+            placeholder="Name"
+          />
+        </label>
+        <label class="modal-form__label" for="user_phone">
+          <input
+            class="modal-form__field"
+            type="tel"
+            id="user_phone"
+            name="user_phone"
+            required
+            placeholder="Phone"
+          />
+        </label>
+        <label class="modal-form__label" for="comment">
+          <textarea
+            class="modal-form__field--comment"
+            name="comment"
+            rows="6"
+            placeholder="Comment"
+            id="comment"
+          ></textarea>
+        </label>
+      </div>
+    </form>
+    <button class="btn" type="submit">Submit</button>
+  </div>
+</div>
