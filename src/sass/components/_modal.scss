@@ -100,8 +100,15 @@ textarea {
   position: absolute;
   top: 20px;
   right: 20px;
-  fill: #444;
+  fill: #131313;
+  stroke: #fff;
   cursor: pointer;
+  transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__cross:hover,
+.modal__cross:focus {
+  fill: #85A279;
 }
 
 .modal__container {
