@@ -1,90 +1,88 @@
 <!-- тимчасова кнопка -->
 <!-- <a href="#" class="js-open-modal" data-modal="1">Кнопка 1</a> -->
 
-
 <div class="modal" data-modal="1">
-      <!--   Svg іконка для закриття вікна  -->
-      <svg
-        class="modal__cross js-modal-close"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
-        />
-      </svg>
-      <div class="modal__container">
-        <p class="modal__title modal__title--form">
-          Thank you for your interest in owning an Ice Cream shop
-        </p>
-        <p class="modal__text">
-          Due to the overwhelming volume of franchise requests we are not
-          accepting new franchisee applications at this time. Once the
-          application process resumes, we will contact you for further
-          information. Please fill out the contact information below and we will
-          reach out for additional information. We appreciate your patience.
-        </p>
-        <form class="modal__form">
-          <div class="modal__group" role="group">
-            <label class="modal__label" for="name"></label>
-            <div class="wrapper__input">
-              <input
-                class="input__form"
-                type="text"
-                name="user_name"
-                id="name"
-                autofocus
-                required
-                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-                title="Name"
-                placeholder="Name"
-              />
-            </div>
-          </div>
-
-          <div class="modal__group" role="group">
-            <label class="modal__label" for="phone"></label>
-            <div class="wrapper__input">
-              <input
-                class="input__form"
-                type="tel"
-                name="user_phone"
-                id="phone"
-                required
-                placeholder="Phone"
-              />
-            </div>
-          </div>
-
-          <div class="modal__group" role="group">
-            <label class="modal__label" for="email"></label>
-            <div class="wrapper__input">
-              <input
-                class="input__form"
-                type="email"
-                name="user_email"
-                id="email"
-                required
-                placeholder="Email"
-              />
-            </div>
-          </div>
-
-          <div class="modal__group modal__comment" role="group">
-            <label class="modal__label" for="comment"></label>
-            <textarea
-              class="comment"
-              name="comment"
-              id="comment"
-              rows="4"
-              placeholder="Comment here..."
-            ></textarea>
-          </div>
-          <button class="btn-sec btn-prim__franc" type="submit">Submit</button>
-        </form>
+  <!--   Svg іконка для закриття вікна  -->
+  <svg
+    class="modal__cross js-modal-close"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+    />
+  </svg>
+  <div class="modal__container">
+    <p class="modal__title modal__title--form">
+      Thank you for your interest in owning an Ice Cream shop
+    </p>
+    <p class="modal__text">
+      Due to the overwhelming volume of franchise requests we are not accepting
+      new franchisee applications at this time. Once the application process
+      resumes, we will contact you for further information. Please fill out the
+      contact information below and we will reach out for additional
+      information. We appreciate your patience.
+    </p>
+    <form class="modal__form">
+      <div class="modal__group" role="group">
+        <label class="modal__label" for="name"></label>
+        <div class="wrapper__input">
+          <input
+            class="input__form"
+            type="text"
+            name="user_name"
+            id="name"
+            autofocus
+            required
+            pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+            title="Name"
+            placeholder="Name"
+          />
+        </div>
       </div>
-    </div>
 
+      <div class="modal__group" role="group">
+        <label class="modal__label" for="phone"></label>
+        <div class="wrapper__input">
+          <input
+            class="input__form"
+            type="tel"
+            name="user_phone"
+            id="phone"
+            required
+            placeholder="Phone"
+          />
+        </div>
+      </div>
 
-    <!-- Підложка для модального вікна -->
-    <div class="overlay js-overlay-modal"></div>
+      <div class="modal__group" role="group">
+        <label class="modal__label" for="email"></label>
+        <div class="wrapper__input">
+          <input
+            class="input__form"
+            type="email"
+            name="user_email"
+            id="email"
+            required
+            placeholder="Email"
+          />
+        </div>
+      </div>
+
+      <div class="modal__group modal__comment" role="group">
+        <label class="modal__label" for="comment"></label>
+        <textarea
+          class="comment"
+          name="comment"
+          id="comment"
+          rows="4"
+          placeholder="Comment here..."
+        ></textarea>
+      </div>
+      <button class="btn-sec btn-prim__franc" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+<!-- Підложка для модального вікна -->
+<div class="overlay js-overlay-modal"></div>
