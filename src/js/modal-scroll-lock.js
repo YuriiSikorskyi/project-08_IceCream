@@ -1,13 +1,15 @@
 (() => {
-  var targetSelector = '.js-overlay-modal';
   //
-  var observeObject = (function () {
-    var _class = {
+  const targetSelector = '.js-overlay-modal';
+  const targetState = 'active';
+  //
+  const observeObject = (function () {
+    const _class = {
       init: function (selector, callback) {
-        var element = document.querySelector(selector);
+        const element = document.querySelector(selector);
 
         try {
-          var observer = new MutationObserver(function (mutations) {
+          const observer = new MutationObserver(function (mutations) {
             mutations.forEach(function (mutation) {
               callback(
                 mutation.target,
@@ -37,10 +39,8 @@
     return _class;
   })();
 
-  (function () {
-    observeObject.init(targetSelector, function (targetNode, name, oldValue) {
-      var overlay = document.querySelector(targetSelector);
-      toggleScroll(overlay.classList.contains('active'));
-    });
-  })();
+  const overlay = document.querySelector(targetSelector);
+  observeObject.init(targetSelector, () => {
+    toggleScroll(overlay.classList.contains(targetState));
+  });
 })();
