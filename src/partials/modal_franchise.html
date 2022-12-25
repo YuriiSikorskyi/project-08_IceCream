@@ -1,8 +1,7 @@
 <!-- тимчасова кнопка -->
 <!-- <a href="#" class="js-open-modal" data-modal="1">Кнопка 1</a> -->
 
-
-<div class="modal" data-modal="1">
+    <div class="modal" data-modal="1">
       <!--   Svg іконка для закриття вікна  -->
       <svg
         class="modal__cross js-modal-close"
@@ -26,14 +25,13 @@
         </p>
         <form class="modal__form">
           <div class="modal__group" role="group">
-            <label class="modal__label" for="name"></label>
+            <label class="modal__label" for="names"></label>
             <div class="wrapper__input">
               <input
                 class="input__form"
                 type="text"
                 name="user_name"
-                id="name"
-                autofocus
+                id="names"
                 required
                 pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
                 title="Name"
@@ -43,13 +41,13 @@
           </div>
 
           <div class="modal__group" role="group">
-            <label class="modal__label" for="phone"></label>
+            <label class="modal__label" for="phones"></label>
             <div class="wrapper__input">
               <input
                 class="input__form"
                 type="tel"
                 name="user_phone"
-                id="phone"
+                id="phones"
                 required
                 placeholder="Phone"
               />
@@ -57,13 +55,13 @@
           </div>
 
           <div class="modal__group" role="group">
-            <label class="modal__label" for="email"></label>
+            <label class="modal__label" for="mail"></label>
             <div class="wrapper__input">
               <input
                 class="input__form"
                 type="email"
                 name="user_email"
-                id="email"
+                id="mail"
                 required
                 placeholder="Email"
               />
@@ -71,11 +69,11 @@
           </div>
 
           <div class="modal__group modal__comment" role="group">
-            <label class="modal__label" for="comment"></label>
+            <label class="modal__label" for="comments"></label>
             <textarea
               class="comment"
               name="comment"
-              id="comment"
+              id="comments"
               rows="4"
               placeholder="Comment here..."
             ></textarea>
