@@ -1,8 +1,4 @@
 (() => {
-  //
-  const targetSelector = '.js-overlay-modal';
-  const targetState = 'active';
-  //
   const observeObject = (function () {
     const _class = {
       init: function (selector, callback) {
@@ -39,8 +35,17 @@
     return _class;
   })();
 
+  const targetSelector = '.js-overlay-modal';
+  const targetState = 'active';
+
   const overlay = document.querySelector(targetSelector);
+  const header = document.querySelector('.header');
+
   observeObject.init(targetSelector, () => {
-    toggleScroll(overlay.classList.contains(targetState));
+    const modalIsOpen = overlay.classList.contains(targetState);
+    const scrollOff = modalIsOpen;
+
+    toggleScroll(scrollOff);
+    header.style.display = modalIsOpen ? 'none' : 'block';
   });
 })();
