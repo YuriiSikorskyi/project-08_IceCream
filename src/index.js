@@ -1,5 +1,6 @@
+import './js/scroll-toggle';
 import './js/modal';
 import './js/slider';
-import './js/scroll-toggle';
 import './js/mobile-menu';
 import './js/header-scroll';
+import './js/modal-scroll-lock';
