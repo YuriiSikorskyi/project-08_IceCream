@@ -1,33 +1,9 @@
 .section-contacts{
+    background-image: linear-gradient(
+        #84a17800 25%,$colorBackground 25%);
 			@media screen and (max-width:767px) {
 					padding-top: 20px;
 				}
-    position: relative;
-    &::after {
-            content: '';
-            position: absolute;
-            top: 448px;
-            left: 0;
-            width: 100%;
-            height: 75%;
-            background-color: $colorBackground;
-            z-index: -1;
-        }
-
-        @media screen and (min-width: 768px) {
-            &::after{
-                top: 359px;
-                height: 56%;
-            }
-    }
-
-        @media screen and (min-width: 1200px) {
-            &::after {
-                    height: 78%;
-                    top: 200px;
-            }
-    
-        }
 }
 .contacts__text{
     font-weight: 500;
@@ -35,7 +11,7 @@
     margin-bottom: 8px;
 
     @media screen and (min-width:768px){
-        font-size: 14px;
+        font-size: $mainFontSize;
     }
         @media screen and (min-width:1200px) {
             font-size: 16px;
@@ -78,8 +54,6 @@
     
     text-transform: uppercase;
     line-height: 120%;
-    
-    color: #131313;
 
     @media screen and (min-width:768px){
         margin-bottom: 32px;
@@ -111,7 +85,6 @@
 }
 .list-contacts__text{
     line-height: 186%;
-    color: #131313;
 
     &--grey{
         color: $colorBtnDisabled;
@@ -119,7 +92,7 @@
 }
 .address__link{
     line-height: 183%;
-    color: #D6936D;
+    color: $colorProduktsCoffeeMilkshakes;
 
     @extend %link;
 
@@ -152,11 +125,6 @@
 								}
 }
 .button-location{
-
-						// @media screen and (min-width:768px) {
-						//      @include cardset(3, 16px);
-						// }
-    // margin-bottom: 16px;
     @include btn-prim('long');
 }
 .button-franchise{
