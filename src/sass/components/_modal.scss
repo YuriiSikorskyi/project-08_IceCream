@@ -1,13 +1,3 @@
-/*  !!! треба буде замінити кнопку */
-// a {
-//   padding: 20px;
-//   display: inline-block;
-//   text-decoration: none;
-//   background-color: #F8D24E;
-//   margin: 10px;
-//   color: #131313;
-//   border-radius: 3px;
-// }
 
 input,
 textarea {
@@ -52,7 +42,7 @@ textarea {
 
   /*  центруємо і задаємо z-index */
   position: fixed;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
@@ -75,6 +65,7 @@ textarea {
   .modal {
     width: 568px;
     height: auto;
+  
   }
 }
 
@@ -201,9 +192,14 @@ textarea {
 }
 
 .modal__map iframe {
+
+  width: 100%;
   height: 100%;
   background-color: var(--main_color);
   border-radius: 10px;
+  border: 0;
+  overflow: hidden;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -280,3 +276,5 @@ textarea {
     margin-bottom: 32px;
   }
 }
+
+
