@@ -5,9 +5,16 @@
   const btnMenuOpen = document.querySelector('[data-menu-open]');
   const btnMenuClose = document.querySelector('[data-menu-close]');
   const menuMobile = document.querySelector('[data-mobile-menu]');
+  const menuMobileNav = document.querySelector('[data-menu-nav]');
 
   btnMenuOpen.addEventListener('click', toggleMenu);
   btnMenuClose.addEventListener('click', toggleMenu);
+
+  // закрываем при клике для скролинга к секции
+  const menuItems = Array.from(menuMobileNav.children);
+  menuItems.forEach(menuItem => {
+    menuItem.addEventListener('click', toggleMenu);
+  });
 
   function toggleMenu() {
     const isOpenned = !menuMobile.classList.toggle(classMenuHidden);
