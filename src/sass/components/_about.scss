@@ -68,7 +68,8 @@
     height: 278px;
 
     @media screen and (min-width: 768px) {
-        margin: 0 38px 62px auto;
+        margin-right: 38px;
+        margin-left: auto;
         width: 330px;
         height: 330px;
     }
@@ -174,7 +175,7 @@
     @media screen and (min-width: 1200px) {
         font-size: 14px;
         width: 437px;
-        margin-bottom: 54px;
+        margin-bottom: 24px;
     }
 }
 .production__btn {
