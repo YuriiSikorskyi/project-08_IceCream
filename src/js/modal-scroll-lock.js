@@ -43,9 +43,9 @@
 
   observeObject.init(targetSelector, () => {
     const modalIsOpen = overlay.classList.contains(targetState);
-    const scrollOff = modalIsOpen;
+    const headerIsShaded = header.classList.contains('header--shaded');
 
-    toggleScroll(scrollOff);
-    header.style.display = modalIsOpen ? 'none' : 'block';
+    toggleScroll(modalIsOpen);
+    header.style.display = headerIsShaded && modalIsOpen ? 'none' : null;
   });
 })();
