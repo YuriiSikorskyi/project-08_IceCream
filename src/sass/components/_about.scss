@@ -1,5 +1,9 @@
 .production {
     background-color: $colorBackground;
+
+    @media screen and (min-width: 1200px) {
+        padding-bottom: 99px;
+    }
 }
 .uppertitle {
     font-weight: 700;
