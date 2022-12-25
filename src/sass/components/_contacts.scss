@@ -1,9 +1,16 @@
 .section-contacts{
     background-image: linear-gradient(
         #84a17800 25%,$colorBackground 25%);
-			@media screen and (max-width:767px) {
+			@media screen and (max-width:767.98px) {
 					padding-top: 20px;
 				}
+                         @media screen and (min-width: 768px) {
+                                    padding-top: 40px;
+                        }
+                
+                                @media screen and (min-width: 1200px) {
+                                    padding-top: 50px;
+                                }
 }
 .contacts__text{
     font-weight: 500;
