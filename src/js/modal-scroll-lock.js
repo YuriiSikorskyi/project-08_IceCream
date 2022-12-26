@@ -40,18 +40,24 @@
 
   const overlay = document.querySelector(targetSelector);
   const header = document.querySelector('.header');
+  const headerBtnBuyNow = document.querySelector('.header__btn');
 
   observeObject.init(targetSelector, () => {
     const modalIsOpen = overlay.classList.contains(targetState);
     const headerIsShaded = header.classList.contains('header--shaded');
 
+    // toggle Buy now anim
+    //
+    headerBtnBuyNow.style.animation = modalIsOpen ? 'unset' : null;
+
+    // body scroll lock
+    //
     toggleScroll(modalIsOpen);
-    // shaded header -> hiding
     header.style.display = headerIsShaded && modalIsOpen ? 'none' : null;
 
-    // modal shown
+    // fix top for .modal.active
+    //
     const activeModal = document.querySelector('.modal.active');
-
     const pos = activeModal.getBoundingClientRect();
     const activeModalHeight = pos.height;
     const viewportHeight = document.documentElement.clientHeight;
