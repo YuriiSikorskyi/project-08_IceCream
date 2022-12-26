@@ -41,7 +41,7 @@
   height: 130px;
   width: 280px;
   margin: 0 auto;
-  z-index: 10;
+  z-index: 1;
   border-radius: 8px;
 
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@
 
 .slide1 {
   background-image: url('../images/slider/sli1-phone.jpg');
-  animation-delay: 9s;
+  animation-delay: 8s;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -180,7 +180,7 @@
 .slide3 {
   background-image: url('../images/slider/sli3-phone.jpg');
 
-  animation-delay: 3s;
+  animation-delay: 4s;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -228,7 +228,7 @@
 
 .slide4 {
   background-image: url('../images/slider/sli2-phone.jpg');
-  animation-delay: 6s;
+  animation-delay: 2;
 }
 
 @media (min-device-pixel-ratio: 2),
