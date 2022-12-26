@@ -8,7 +8,15 @@ textarea {
   padding: 8px 12px;
   box-sizing: border-box;
   border: 1px solid #84A178;
+  transition: 0.5s;
 }
+
+input:focus,
+textarea:focus {
+  border: 1px solid #F8D24E;
+}
+
+
 
 textarea {
   resize: none;
