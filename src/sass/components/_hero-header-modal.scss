@@ -2,7 +2,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  transform: translate(-50%);
   z-index: 9999;
   @media screen and (max-width: 768px) {
     width: 280px;
