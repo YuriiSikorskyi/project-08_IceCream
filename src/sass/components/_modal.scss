@@ -317,14 +317,19 @@ textarea {
   @include btn-sec();
 }
 
-.btn-prim__franc {
+.btn_location{
+  display: inline-block;
+}
+
+.btn-prim__franc{
   margin-bottom: 28px;
   margin-left: auto;
   margin-right: auto;
 }
 
+
 @media screen and (min-width: 768px) {
-  .btn-prim__franc {
+  .btn-prim__franc{
     margin-bottom: 32px;
   }
 
