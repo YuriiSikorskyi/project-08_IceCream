@@ -44,7 +44,7 @@ textarea {
   position: fixed;
   top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   z-index: 30;
   /* має бути вище ніж у підложки*/
 
@@ -59,6 +59,11 @@ textarea {
   background-color: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
+
+	@media screen and (max-height: 1300px) {
+			top: 1%;
+			transform: translate(-50%, 0%);
+		}
 }
 
 @media screen and (min-width: 768px) {
