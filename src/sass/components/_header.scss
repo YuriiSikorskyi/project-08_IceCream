@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 11;
 
   &--shaded {
     border-bottom: 1px solid rgba($colorWhite, 0.2);
@@ -120,6 +120,13 @@
   }
 }
 
+.header__btn {
+  animation: jittery 5s infinite;
+  &:hover {
+    animation: heartbeat 0.5s infinite;
+  }
+}
+
 ///////////////////////
 // nav
 ///////////////////////
@@ -149,5 +156,42 @@
     &:focus-visible {
       color: $colorYellow;
     }
+  }
+}
+
+///////////////////////
+// animation
+///////////////////////
+
+@keyframes jittery {
+  5%,
+  50% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  15% {
+    transform: scale(1.15);
+  }
+  20% {
+    transform: scale(1.15) rotate(-5deg);
+  }
+  25% {
+    transform: scale(1.15) rotate(5deg);
+  }
+  30% {
+    transform: scale(1.15) rotate(-3deg);
+  }
+  35% {
+    transform: scale(1.15) rotate(2deg);
+  }
+  40% {
+    transform: scale(1.15) rotate(0);
+  }
+}
+@keyframes heartbeat {
+  50% {
+    transform: scale(1.1);
   }
 }

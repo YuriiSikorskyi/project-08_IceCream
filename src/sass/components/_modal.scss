@@ -1,5 +1,4 @@
 
-
 input,
 textarea {
   display: block;
@@ -7,7 +6,7 @@ textarea {
   /* margin: 1rem 0; */
   padding: 8px 12px;
   box-sizing: border-box;
-  border: 1px solid #84A178;
+  border: 1px solid #84a178;
 }
 
 textarea {
@@ -16,7 +15,6 @@ textarea {
 
 /* Стилі для підложки */
 .overlay {
-
   /* ховаємо підложку  */
   opacity: 0;
   visibility: hidden;
@@ -26,15 +24,15 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
-  transition: .3s all;
+  transition: 0.3s all;
 }
-
 
 /* Стилі для модальних вікон */
 
 .modal {
+
   /*збільшення*/
  touch-action: pan-y pinch-zoom;
 
@@ -55,19 +53,19 @@ textarea {
   /* має бути вище ніж у підложки*/
 
   /*  дод.стилі   */
-  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
 
   border-radius: 3px;
   background-color: #fff;
   transition: 0.3s all;
 
-  background-color: #FCFCFC;
-  border: 2px solid #F8D24E;
+  background-color: #fcfcfc;
+  border: 2px solid #f8d24e;
   border-radius: 10px;
-
-
 }
+
+
 
 @media screen and (min-width: 768px) {
   .modal {
@@ -75,7 +73,6 @@ textarea {
     height: auto;
 
   }
-
 }
 
 /* Стилі для активних класів підложки і вікна */
@@ -101,7 +98,7 @@ textarea {
 
 .modal__cross:hover,
 .modal__cross:focus {
-  fill: #85A279;
+  fill: #85a279;
 }
 
 .modal__container {
@@ -110,7 +107,6 @@ textarea {
   margin: 28px 30px 24px 30px;
 }
 
-
 .modal_video {
   margin: 32px 60px;
   height: 100%;
@@ -118,14 +114,11 @@ textarea {
 
 .modal__form {
   display: block;
-
 }
-
 
 .modal__wrapper {
   height: auto;
 }
-
 
 .modal__title {
   text-align: center;
@@ -133,13 +126,12 @@ textarea {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: calc(24/16);
+  line-height: calc(24 / 16);
   color: var(--title_color);
   margin-top: 28px;
   margin-bottom: 28px;
   margin-left: auto;
   margin-right: auto;
-
 
   padding: 0;
 }
@@ -151,10 +143,7 @@ textarea {
     margin-top: 32px;
     margin-bottom: 32px;
   }
-
 }
-
-
 
 .modal__text,
 .modal__text--video {
@@ -183,7 +172,6 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-
   .modal__text--video {
     font-size: 16px;
     margin-top: 24px;
@@ -199,7 +187,6 @@ textarea {
   margin-right: auto;
   height: 200px;
   margin-bottom: 8px;
-
 }
 
 @media screen and (min-width: 768px) {
@@ -208,10 +195,10 @@ textarea {
     height: 260px;
     margin-bottom: 32px;
   }
-
 }
 
 .modal__map iframe {
+
   width: 100%;
   height: 100%;
   background-color: var(--main_color);
@@ -227,7 +214,6 @@ textarea {
     height: 260px;
     margin-bottom: 32px;
   }
-
 }
 
 .modal__group {
@@ -237,9 +223,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .modal__group {
     margin-bottom: 16px;
-
   }
-
 }
 
 .modal__comment {
@@ -250,7 +234,6 @@ textarea {
   .modal__comment {
     margin-bottom: 32px;
   }
-
 }
 
 .input__form {
@@ -262,14 +245,10 @@ textarea {
   width: 100%;
   color: #131313;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84A178;
+  border: 1px solid #84a178;
   border-radius: 10px;
   /* padding-left: 12px; */
-
-
 }
-
-
 
 .comment {
   width: 100%;
@@ -279,21 +258,17 @@ textarea {
   font-size: 12px;
   line-height: 140%;
 
-
-
   color: #131313;
   background: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84A178;
+  border: 1px solid #84a178;
   border-radius: 10px;
 }
 
-.btn-prim{
-@include btn-prim();
-
+.btn-prim {
+  @include btn-prim();
 }
-
-.btn-sec{
-  @include btn-sec();
+.button_ingridients {
+  margin: 0 auto;
 }
 
 .btn-prim__franc {
@@ -306,6 +281,6 @@ textarea {
   .btn-prim__franc {
     margin-bottom: 32px;
   }
-
 }
+
 
