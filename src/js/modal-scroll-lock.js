@@ -46,6 +46,22 @@
     const headerIsShaded = header.classList.contains('header--shaded');
 
     toggleScroll(modalIsOpen);
+    // shaded header -> hiding
     header.style.display = headerIsShaded && modalIsOpen ? 'none' : null;
+
+    // modal shown
+    const activeModal = document.querySelector('.modal.active');
+
+    const pos = activeModal.getBoundingClientRect();
+    const activeModalHeight = pos.height;
+    const viewportHeight = document.documentElement.clientHeight;
+
+    if (viewportHeight <= activeModalHeight) {
+      activeModal.style.top = 0;
+      activeModal.style.transform = 'translate(-50%, 0)';
+    } else {
+      activeModal.style.top = null;
+      activeModal.style.transform = null;
+    }
   });
 })();
