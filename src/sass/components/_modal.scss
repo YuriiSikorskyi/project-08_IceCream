@@ -63,6 +63,7 @@ textarea {
 
   /* scroll effect */
   overflow-y: auto;
+ }
 
 @media screen and (min-width: 768px) {
   .modal {
@@ -71,7 +72,7 @@ textarea {
 
   }
 }
- }
+
 /* Стилі для активних класів підложки і вікна */
 
 .modal.active,
