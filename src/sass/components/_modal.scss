@@ -23,7 +23,7 @@ input:required:focus:valid {
 
 }
 
-input:focus:invalid {
+input:invalid {
   background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
   border-color: red;
 }
@@ -293,14 +293,19 @@ textarea {
   margin: 0 auto;
 }
 
-.btn-prim__franc {
+.btn_location{
+  display: inline-block;
+}
+
+.btn-prim__franc{
   margin-bottom: 28px;
   margin-left: auto;
   margin-right: auto;
 }
 
+
 @media screen and (min-width: 768px) {
-  .btn-prim__franc {
+  .btn-prim__franc{
     margin-bottom: 32px;
   }
 }
