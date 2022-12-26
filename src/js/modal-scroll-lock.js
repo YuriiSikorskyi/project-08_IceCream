@@ -40,28 +40,53 @@
 
   const overlay = document.querySelector(targetSelector);
   const header = document.querySelector('.header');
+  const headerBtnBuyNow = document.querySelector('.header__btn');
+  const modals = Array.from(document.getElementsByClassName('modal'));
+
+  // const isHidden = el => {
+  //   const styles = window.getComputedStyle(el);
+  //   return (
+  //     styles.display === 'none' ||
+  //     styles.visibility === 'hidden' ||
+  //     styles.opacity === '0'
+  //   );
+  // };
 
   observeObject.init(targetSelector, () => {
     const modalIsOpen = overlay.classList.contains(targetState);
     const headerIsShaded = header.classList.contains('header--shaded');
-
+    //
+    // toggle Buy now anim
+    //
+    headerBtnBuyNow.style.animation = modalIsOpen ? 'unset' : null;
+    //
+    // body scroll lock
+    //
     toggleScroll(modalIsOpen);
-    // shaded header -> hiding
     header.style.display = headerIsShaded && modalIsOpen ? 'none' : null;
+    //
+    // fix top for modal
+    //
+    if (modalIsOpen) {
+      const viewportHeight = document.documentElement.clientHeight;
 
-    // modal shown
-    const activeModal = document.querySelector('.modal.active');
+      let pos, modalHeight;
+      modals.forEach(modal => {
+        //
+        modal.style.top = null;
+        modal.style.transform = null;
+        //
+        // .modal.active found
+        if (modal.classList.contains('active')) {
+          pos = modal.getBoundingClientRect();
+          modalHeight = pos.height;
 
-    const pos = activeModal.getBoundingClientRect();
-    const activeModalHeight = pos.height;
-    const viewportHeight = document.documentElement.clientHeight;
-
-    if (viewportHeight <= activeModalHeight) {
-      activeModal.style.top = 0;
-      activeModal.style.transform = 'translate(-50%, 0)';
-    } else {
-      activeModal.style.top = null;
-      activeModal.style.transform = null;
+          if (viewportHeight <= modalHeight) {
+            modal.style.top = 0;
+            modal.style.transform = 'translate(-50%, 0)';
+          }
+        }
+      });
     }
   });
 })();
