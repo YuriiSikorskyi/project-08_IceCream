@@ -1,4 +1,5 @@
 .section-contacts{
+    position: relative;
     background-image: linear-gradient(
         #84a17800 25%,$colorBackground 25%);
 			@media screen and (max-width:767.98px) {
@@ -32,6 +33,66 @@
         margin-bottom: 32px;
     }
 }
+
+
+.dust-paarticle
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+    width: 100%;
+}
+
+#snell
+{
+  position:absolute;
+  top: -36px;
+  left: 0;
+  width: 100%;
+
+ 
+   @media (min-width: 768px) {
+    top: -20px;
+    right: -100px;
+   }
+   @media (min-width: 1200px) {
+    top: -10px;
+    right: -100px;
+   }
+}
+#eye1
+{
+animation: swing ease-in-out .6s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    left: calc(52% - .0rem);
+}
+#eye2
+{
+animation: swing ease-in-out .5s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    left: calc(40% - .0rem);
+}
+
+#dust-paarticle path
+{
+  transform-box: fill-box;
+    transform-origin: right;
+}
+
+/*************swing************/
+@keyframes swing {
+    0% { transform: rotate(8deg); }
+    100% { transform: rotate(-8deg); }
+}
+.position-set
+{
+position:absolute;
+  top: 15%;
+}
+
+	@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700,900');
 .list-contacts{
 
 						@include cardset(1, 16px);
