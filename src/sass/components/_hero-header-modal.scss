@@ -2,13 +2,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   z-index: 9999;
   @media screen and (max-width: 768px) {
-    width: 95%;
-    max-width: 280px;
-    height: 95%;
-    max-height: 991px;
+    width: 280px;
+    height: 991px;
     overflow: scroll;
     padding: 28px;
   }
@@ -311,8 +309,8 @@
   color: #131313;
 }
 
-.btn-prim {
-  @include btn-prim();
+.btn-hero-modal {
+  margin: 0 auto;
 }
 
 .btn-sec {
