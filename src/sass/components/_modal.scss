@@ -13,9 +13,26 @@ textarea {
 
 input:focus,
 textarea:focus {
+  outline: 0;
   border: 1px solid #F8D24E;
 }
 
+
+input:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+
+input:required:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% #84A178;
+
+}
+
+input:focus:invalid {
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+
+}
 
 
 textarea {

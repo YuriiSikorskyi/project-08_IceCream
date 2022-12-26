@@ -35,7 +35,7 @@
                 required
                 pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
                 title="Name and Surname"
-                placeholder="Name"
+                placeholder="Name and Surname"
               />
             </div>
           </div>
@@ -49,6 +49,7 @@
                 name="user_phone"
                 id="phones"
                 required
+                minlength="5"
                 placeholder="Phone"
               />
             </div>
@@ -75,7 +76,7 @@
               name="comment"
               id="comments"
               rows="4"
-              placeholder="Comment here..."
+              placeholder="Your comment"
             ></textarea>
           </div>
           <button class="btn-sec btn-prim__franc" type="submit">Submit</button>
