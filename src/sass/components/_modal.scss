@@ -35,6 +35,8 @@ textarea {
 /* Стилі для модальних вікон */
 
 .modal {
+  /*збільшення*/
+ touch-action: pan-y pinch-zoom;
 
   /* ховаємо вікна  */
   opacity: 0;
