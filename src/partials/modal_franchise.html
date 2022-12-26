@@ -26,13 +26,13 @@
         </p>
         <form class="modal__form">
           <div class="modal__group" role="group">
-            <label class="modal__label" for="names"></label>
+            <label class="modal__label" for="userName"></label>
             <div class="wrapper__input">
               <input
                 class="input__form"
                 type="text"
                 name="user_name"
-                id="names"
+                id="userName"
                 required
                 pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
                 title="Name and Surname"
@@ -42,13 +42,15 @@
           </div>
 
           <div class="modal__group" role="group">
-            <label class="modal__label" for="phones"></label>
+            <label class="modal__label" for="userTel"></label>
             <div class="wrapper__input">
               <input
                 class="input__form"
                 type="tel"
                 name="user_phone"
-                id="phones"
+                id="userTel"
+                pattern="^[0-9]+$"
+                title="Enter your phone number"
                 required
                 minlength="5"
                 placeholder="Phone"
@@ -57,13 +59,13 @@
           </div>
 
           <div class="modal__group" role="group">
-            <label class="modal__label" for="mail"></label>
+            <label class="modal__label" for="userMail"></label>
             <div class="wrapper__input">
               <input
                 class="input__form"
                 type="email"
                 name="user_email"
-                id="mail"
+                id="userMail"
                 required
                 placeholder="Email"
               />
@@ -71,11 +73,11 @@
           </div>
 
           <div class="modal__group modal__comment" role="group">
-            <label class="modal__label" for="comments"></label>
+            <label class="modal__label" for="feedback"></label>
             <textarea
               class="comment"
               name="comment"
-              id="comments"
+              id="feedback"
               rows="4"
               placeholder="Your comment"
             ></textarea>
