@@ -6,8 +6,34 @@ textarea {
   /* margin: 1rem 0; */
   padding: 8px 12px;
   box-sizing: border-box;
-  border: 1px solid #84a178;
+  border: 1px solid #84A178;
+  transition: 0.5s;
+
 }
+
+input:focus,
+textarea:focus {
+  outline: 0;
+  border: 1px solid #F8D24E;
+}
+
+
+input:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+
+input:required:focus:valid {
+  background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% #84A178;
+
+}
+
+input:focus:invalid {
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+
+}
+
 
 textarea {
   resize: none;
