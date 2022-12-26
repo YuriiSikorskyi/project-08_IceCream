@@ -47,7 +47,7 @@ textarea {
 
   /*  центруємо і задаємо z-index */
   position: fixed;
-  top: 25%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 30;
@@ -65,13 +65,16 @@ textarea {
   border: 2px solid #F8D24E;
   border-radius: 10px;
 
+  /* scroll effect */
+  overflow-y: auto;
+
 }
 
 @media screen and (min-width: 768px) {
   .modal {
     width: 568px;
     height: auto;
-  
+
   }
 
 }
