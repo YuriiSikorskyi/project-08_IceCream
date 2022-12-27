@@ -83,6 +83,15 @@ textarea {
   background-color: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
+
+		@media screen and (max-width: 767px) {
+				width: 95%;
+					max-width: 280px;
+					height: 95%;
+					max-height: 609px;
+					overflow: auto;
+					
+			}
 }
 
 
