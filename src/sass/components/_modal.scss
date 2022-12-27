@@ -23,8 +23,8 @@ input:required:focus:valid {
 
 }
 
-input:invalid {
-  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+input:focus:invalid {
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% rgb(238, 211, 201);
   border-color: red;
 }
 
