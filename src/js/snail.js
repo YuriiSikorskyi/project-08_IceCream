@@ -17,7 +17,7 @@ var design = anime({
       ], 
       
     easing: 'easeInOutSine',
-    duration: 200000,
+    duration: 100000,
   });
   
   anime({
