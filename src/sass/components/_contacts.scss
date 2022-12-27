@@ -41,28 +41,25 @@
   top: 0;
   left: 0;
   width: 100%;
+  pointer-events: none;
   
     @media screen and (min-width:768px){
     height: 500px;
 }
-
 }
-
 #snell
 {
   position:absolute;
   top: -36px;
-  left: 0;
+  right: 0;
   width: 100%;
 
  
    @media (min-width: 768px) {
     top: -20px;
-    right: -100px;
    }
    @media (min-width: 1200px) {
     top: -10px;
-    right: -100px;
    }
 }
 #eye1
@@ -82,7 +79,7 @@ animation: swing ease-in-out .5s infinite alternate;
 
 #dust-paarticle path
 {
-  transform-box: fill-box;
+    transform-box: fill-box;
     transform-origin: right;
 }
 
