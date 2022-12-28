@@ -128,7 +128,9 @@
   line-height: calc(17 / 12);
   color: $colorText;
 
-  animation: bottom-to-top 0.5s ease 0.75s both;
+  @media screen and (min-width: 768px) {
+    animation: bottom-to-top 0.5s ease 0.6s both;
+  }
 
   @media screen and (max-width: 767.98px) {
     display: none;
@@ -143,6 +145,8 @@
 
     font-size: 14px;
     line-height: calc(20 / 14);
+
+    animation: bottom-to-top 0.5s ease 0.75s both;
   }
 
   &-btn {
@@ -234,7 +238,7 @@
     animation: bottom-to-top 0.5s ease 0.3s both;
 
     @media screen and (min-width: 768px) {
-      animation: bottom-to-top 1s ease 0.1s both;
+      animation: bottom-to-top 0.8s ease 0.1s both;
       left: 408px;
     }
 
