@@ -56,8 +56,6 @@
     // body scroll lock, header hiding
     //
     toggleScroll(modalIsOpenned);
-    // header.style.opacity = headerIsShaded && modalIsOpenned ? '0' : null;
-    header.style.display = headerIsShaded && modalIsOpenned ? 'none' : null;
     //
     // fix top for modal
     //

@@ -1,24 +1,23 @@
 var design = anime({
     targets: 'svg #XMLID5',
     keyframes: [
-      {translateX: -500},
+      {translateX: -1200},
       {rotateY: 180},
-      {translateX: 920},
+      {translateX: 1420},
       {rotateY: 0},
-      {translateX: -500},
+      {translateX: -1200},
       {rotateY: 180},
-      {translateX: -500},
-      {translateX: -500},
+      {translateX: -1200},
       {rotateY: 180},
-      {translateX: 920},
+      {translateX: 1420},
       {rotateY: 0},
-      {translateX: -500},
+      {translateX: -1200},
       {rotateY: 180},
-      {translateX: -500},
-      ],
+      {translateX: -100},
+      ], 
       
     easing: 'easeInOutSine',
-    duration: 300000,
+    duration: 100000,
   });
   
   anime({

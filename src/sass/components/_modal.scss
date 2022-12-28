@@ -20,12 +20,12 @@ textarea:focus {
 
 input:required:focus:valid {
   background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% #84A178;
-
+  border-color: #627a58;
 }
 
-input:invalid {
-  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
-  border-color: red;
+input:focus:invalid {
+  background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50%;
+  border-color: rgb(250, 160, 160);
 }
 
 
@@ -90,7 +90,7 @@ textarea {
 					// height: 95%;
 					max-height: 609px;
 					overflow: auto;
-					
+
 			}
 }
 
