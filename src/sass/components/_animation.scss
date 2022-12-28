@@ -99,3 +99,26 @@
     opacity: 1;
   }
 }
+
+///////////////////////
+// flipping
+///////////////////////
+
+.flipX {
+  animation: 1s anim-flipX ease infinite;
+}
+
+@keyframes anim-flipX {
+  0% {
+    opacity: 0;
+    transform: rotateX(90def);
+  }
+  50% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(720deg);
+  }
+}
