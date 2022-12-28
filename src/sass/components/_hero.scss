@@ -222,6 +222,8 @@
     bottom: 0;
     left: 0;
 
+    pointer-events: none;
+
     animation: bottom-to-top 0.5s ease 0.3s both;
 
     @media screen and (min-width: 1200px) {
