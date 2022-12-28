@@ -36,5 +36,92 @@
       <li><span class="hero__meter-num">16</span> cafes</li>
       <li><span class="hero__meter-num">23</span> food trucks</li>
     </ul>
+
+    <!-- images -->
+
+    <!-- icecream cone -->
+    <picture>
+      <!-- desktop -->
+      <source
+        media="(min-width: 1200px)"
+        srcset="
+          ./images/hero/icecream-cone-desktop.png    1x,
+          ./images/hero/icecream-cone-desktop@2x.png 2x
+        "
+      />
+      <!-- tablet -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/hero/icecream-cone-tablet.png    1x,
+          ./images/hero/icecream-cone-tablet@2x.png 2x
+        "
+      />
+      <!-- phone -->
+      <source
+        media="(max-width: 767.99px)"
+        srcset="
+          ./images/hero/icecream-cone-phone.png    1x,
+          ./images/hero/icecream-cone-phone@2x.png 2x
+        "
+      />
+      <img
+        class="hero__pic-cone"
+        src=" ./images/hero/icecream-cone-tablet.png "
+        alt="Icecream cone"
+        loading="lazy"
+      />
+    </picture>
+
+    <!-- icecream plate -->
+    <picture>
+      <!-- desktop -->
+      <source
+        media="(min-width: 1200px)"
+        srcset="
+          ./images/hero/icecream-plate-desktop.png    1x,
+          ./images/hero/icecream-plate-desktop@2x.png 2x
+        "
+      />
+      <!-- tablet -->
+      <source
+        media="(min-width: 768px)"
+        srcset="
+          ./images/hero/icecream-plate-tablet.png    1x,
+          ./images/hero/icecream-plate-tablet@2x.png 2x
+        "
+      />
+      <img
+        class="hero__pic-plate"
+        src=" ./images/hero/icecream-plate-tablet.png "
+        alt="Icecream plate"
+        loading="lazy"
+      />
+    </picture>
+
+    <!-- dots -->
+    <picture>
+      <!-- desktop -->
+      <source
+        media="(min-width: 1200px)"
+        srcset="./images/hero/hero-dots-desktop.svg"
+      />
+      <!-- tablet -->
+      <source
+        media="(min-width: 768px)"
+        srcset="./images/hero/hero-dots-tablet.svg"
+      />
+      <!-- phone -->
+      <source
+        media="(max-width: 767.99px)"
+        srcset="./images/hero/hero-dots-mobile.svg"
+      />
+      <img
+        class="hero__pic-dots"
+        src=" ./images/hero/hero-dots-tablet.svg "
+        alt="Background dots"
+        loading="lazy"
+      />
+    </picture>
   </div>
 </section>

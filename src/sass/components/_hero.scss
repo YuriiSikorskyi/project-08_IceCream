@@ -35,50 +35,7 @@
   position: relative;
   height: 100%;
 
-  background-repeat: no-repeat;
-
-  background-image: url('../images/hero/icecream-cone-phone.png'),
-    url('../images/hero/hero-dots-mobile.svg');
-  background-position: bottom 0 left 60%, bottom 0 left 0;
-
-  @include dpr(2) {
-    background-image: url('../images/hero/icecream-cone-phone@2x.png'),
-      url('../images/hero/hero-dots-mobile.svg');
-    background-position: bottom 0 left 60%, bottom 0 left 0;
-    background-size: 177px 217px, 100% 50px;
-  }
-
-  @media screen and (min-width: 768px) {
-    background-image: url('../images/hero/icecream-plate-tablet.png'),
-      url('../images/hero/icecream-cone-tablet.png'),
-      url('../images/hero/hero-dots-tablet.svg');
-    background-position: bottom 3% left 7%, bottom 0 right 19%, bottom 0 left 0;
-
-    @include dpr(2) {
-      background-image: url('../images/hero/icecream-plate-tablet@2x.png'),
-        url('../images/hero/icecream-cone-tablet@2x.png'),
-        url('../images/hero/hero-dots-tablet.svg');
-      background-position: bottom 3% left 7%, bottom 0 right 19%,
-        bottom 0 left 0;
-      background-size: 152px 152px, 268px 329px, 100% 68px;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    background-image: url('../images/hero/icecream-plate-desktop.png'),
-      url('../images/hero/icecream-cone-desktop.png'),
-      url('../images/hero/hero-dots-desktop.svg');
-    background-position: bottom 20% left 2%, bottom 0 right 10%, bottom 0 left 0;
-
-    @include dpr(2) {
-      background-image: url('../images/hero/icecream-plate-desktop@2x.png'),
-        url('../images/hero/icecream-cone-desktop@2x.png'),
-        url('../images/hero/hero-dots-desktop.svg');
-      background-position: bottom 20% left 2%, bottom 0 right 10%,
-        bottom 0 left 0;
-      background-size: 225px 225px, 456px 560px, 100% 383px;
-    }
-  }
+  overflow: hidden;
 }
 
 ///////////////////////
@@ -96,6 +53,8 @@
   text-transform: uppercase;
   color: $colorText;
 
+  animation: left-to-right 0.65s ease 0s both;
+
   &-accent {
     @media screen and (max-width: 1199.98px) {
       font-size: 34px;
@@ -107,6 +66,8 @@
     width: 367px;
     font-size: 38px;
     line-height: calc(48 / 38);
+
+    animation: left-to-right 0.5s ease 0.3s both;
   }
 }
 
@@ -166,6 +127,8 @@
   font-size: 12px;
   line-height: calc(17 / 12);
   color: $colorText;
+
+  animation: bottom-to-top 0.5s ease 0.75s both;
 
   @media screen and (max-width: 767.98px) {
     display: none;
@@ -242,5 +205,60 @@
   @media screen and (min-width: 1200px) {
     font-size: 46px;
     line-height: calc(56 / 46);
+  }
+}
+
+///////////////////////
+// pictures
+///////////////////////
+
+.hero__pic {
+  &-dots {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation: bottom-to-top 0.5s ease 0.3s both;
+
+    @media screen and (min-width: 1200px) {
+      animation: bottom-to-top 0.5s ease 0.5s both;
+    }
+  }
+
+  &-cone {
+    position: absolute;
+    bottom: 0;
+    left: 83px;
+    z-index: 1;
+
+    animation: bottom-to-top 1s ease 0.3s both;
+
+    @media screen and (min-width: 768px) {
+      left: 408px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      animation: bottom-to-top 1s ease 0.5s both;
+      left: 652px;
+    }
+  }
+
+  &-plate {
+    position: absolute;
+    bottom: 10px;
+    left: 32px;
+    z-index: 1;
+
+    animation: bottom-to-top 0.7s ease 0.3s both;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+      bottom: 63px;
+      left: 16px;
+      animation: bottom-to-top 0.7s ease 0.5s both;
+    }
   }
 }

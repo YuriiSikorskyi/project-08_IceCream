@@ -53,10 +53,9 @@
     //
     headerBtnBuyNow.style.animation = modalIsOpenned ? 'unset' : null;
     //
-    // body scroll lock
+    // body scroll lock, header hiding
     //
     toggleScroll(modalIsOpenned);
-    header.style.display = headerIsShaded && modalIsOpenned ? 'none' : null;
     //
     // fix top for modal
     //
