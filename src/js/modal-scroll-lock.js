@@ -35,39 +35,33 @@
     return _class;
   })();
 
-  const targetSelector = '.js-overlay-modal';
-  const targetState = 'active';
-
-  const overlay = document.querySelector(targetSelector);
+  const backdrop = document.querySelector('.js-overlay-modal');
   const header = document.querySelector('.header');
   const headerBtnBuyNow = document.querySelector('.header__btn');
   const modals = Array.from(document.getElementsByClassName('modal'));
+  const menuMobile = document.querySelector('[data-mobile-menu]');
 
-  // const isHidden = el => {
-  //   const styles = window.getComputedStyle(el);
-  //   return (
-  //     styles.display === 'none' ||
-  //     styles.visibility === 'hidden' ||
-  //     styles.opacity === '0'
-  //   );
-  // };
-
-  observeObject.init(targetSelector, () => {
-    const modalIsOpen = overlay.classList.contains(targetState);
+  observeObject.init('.js-overlay-modal', () => {
+    const mobileIsOpenned = !menuMobile.classList.contains(
+      'mobile-menu--hidden'
+    );
+    const modalIsOpenned =
+      backdrop.classList.contains('active') || mobileIsOpenned;
     const headerIsShaded = header.classList.contains('header--shaded');
     //
     // toggle Buy now anim
     //
-    headerBtnBuyNow.style.animation = modalIsOpen ? 'unset' : null;
+    headerBtnBuyNow.style.animation = modalIsOpenned ? 'unset' : null;
     //
-    // body scroll lock
+    // body scroll lock, header hiding
     //
-    toggleScroll(modalIsOpen);
-    header.style.display = headerIsShaded && modalIsOpen ? 'none' : null;
+    toggleScroll(modalIsOpenned);
+    // header.style.opacity = headerIsShaded && modalIsOpenned ? '0' : null;
+    header.style.display = headerIsShaded && modalIsOpenned ? 'none' : null;
     //
     // fix top for modal
     //
-    if (modalIsOpen) {
+    if (modalIsOpenned) {
       const viewportHeight = document.documentElement.clientHeight;
 
       let pos, modalHeight;
@@ -90,3 +84,12 @@
     }
   });
 })();
+
+// const isHidden = el => {
+//   const styles = window.getComputedStyle(el);
+//   return (
+//     styles.display === 'none' ||
+//     styles.visibility === 'hidden' ||
+//     styles.opacity === '0'
+//   );
+// };

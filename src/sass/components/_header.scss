@@ -135,6 +135,8 @@
   &__nav-list {
     display: none;
 
+    animation: top-to-bottom 0.5s ease 0s both;
+
     @media screen and (min-width: 1200px) {
       display: flex;
       align-items: center;
@@ -159,39 +161,11 @@
   }
 }
 
-///////////////////////
-// animation
-///////////////////////
-
-@keyframes jittery {
-  5%,
-  50% {
-    transform: scale(1);
-  }
-  10% {
-    transform: scale(0.9);
-  }
-  15% {
-    transform: scale(1.15);
-  }
-  20% {
-    transform: scale(1.15) rotate(-5deg);
-  }
-  25% {
-    transform: scale(1.15) rotate(5deg);
-  }
-  30% {
-    transform: scale(1.15) rotate(-3deg);
-  }
-  35% {
-    transform: scale(1.15) rotate(2deg);
-  }
-  40% {
-    transform: scale(1.15) rotate(0);
-  }
-}
-@keyframes heartbeat {
-  50% {
-    transform: scale(1.1);
-  }
-}
+// @keyframes appear {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
