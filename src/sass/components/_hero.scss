@@ -231,9 +231,10 @@
     left: 83px;
     z-index: 1;
 
-    animation: bottom-to-top 1s ease 0.3s both;
+    animation: bottom-to-top 0.5s ease 0.3s both;
 
     @media screen and (min-width: 768px) {
+      animation: bottom-to-top 1s ease 0.1s both;
       left: 408px;
     }
 
