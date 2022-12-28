@@ -146,7 +146,7 @@
     font-size: 14px;
     line-height: calc(20 / 14);
 
-    animation: bottom-to-top 0.5s ease 0.75s both;
+    animation: bottom-to-top 0.5s ease 0.7s both;
   }
 
   &-btn {
@@ -243,7 +243,7 @@
     }
 
     @media screen and (min-width: 1200px) {
-      animation: bottom-to-top 0.8s ease 0.5s both;
+      animation: bottom-to-top 0.8s ease 0.6s both;
       left: 652px;
     }
   }
