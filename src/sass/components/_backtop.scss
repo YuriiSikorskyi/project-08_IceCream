@@ -23,6 +23,10 @@
     opacity: 1;
   }
 
+  &--hidden {
+    display: none;
+  }
+
   &__icon {
     width: 50%;
     height: 50%;
