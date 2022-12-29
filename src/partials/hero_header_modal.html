@@ -7,17 +7,38 @@
     </button>
 
     <h3 class="hero-modal__title hero-modal--distance">Buy now</h3>
-    <ul class="hero-modal__list">
-      <li class="hero-modal__item hero-modal__item--cream">
-        <h3 class="hero-modal__subtitle">ice cream</h3>
-      </li>
-      <li class="hero-modal__item hero-modal__item--coffee">
-        <h3 class="hero-modal__subtitle">ice coffee</h3>
-      </li>
-      <li class="hero-modal__item hero-modal__item--milkshakes">
-        <h3 class="hero-modal__subtitle">milkshake</h3>
-      </li>
-    </ul>
+
+    <div class="hero-modal__choice">
+      <form class="hero-modal__checkform">
+        <label class="hero-modal__checkbox">
+          <span class="hero-modal__subtitle">ice cream</span>
+          <input
+            class="hero-modal__check hero-modal__check--cream"
+            type="checkbox"
+            name="product"
+            value="ice-cream"
+          >
+        </label>
+        <label class="hero-modal__checkbox">
+          <span class="hero-modal__subtitle">ice coffee</span>
+          <input
+            class="hero-modal__check hero-modal__check--coffee"
+            type="checkbox"
+            name="product"
+            value="ice-coffee"
+          >
+        </label>
+        <label class="hero-modal__checkbox">
+          <span class="hero-modal__subtitle">milkshake</span>
+          <input
+            class="hero-modal__check hero-modal__check--milkshakes"
+            type="checkbox"
+            name="product"
+            value="milkshake"
+          >
+        </label>
+      </form>
+    </div>
 
     <form class="modal__form modal-form-hero__group">
       <div class="modal__group" role="group">
