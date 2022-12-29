@@ -103,7 +103,7 @@
 
 .slide1 {
 
-  background-image: url('../images/slider/sli1-phone.jpg');
+  background-image: url('../images/slider/sli1-phone.webp');
   animation-delay: 8s;
 }
 
@@ -112,7 +112,7 @@
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
   .slide1 {
-    background-image: url('../images/slider/sli1-phone@2x.jpg');
+    background-image: url('../images/slider/sli1-phone@2x.webp');
   }
 }
 
@@ -120,7 +120,7 @@
 
 @media screen and (min-width: 768px){
   .slide1 {
-    background-image: url('../images/slider/sli1-tablet.jpg');
+    background-image: url('../images/slider/sli1-tablet.webp');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -128,14 +128,14 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .slide1 {
-      background-image: url('../images/slider/sli1-tablet@2x.jpg');
+      background-image: url('../images/slider/sli1-tablet@2x.webp');
     }
   }
 }
 
 @media screen and (min-width: 1200px){
   .slide1 {
-    background-image: url('../images/slider/sli1-desktop.jpg');
+    background-image: url('../images/slider/sli1-desktop.webp');
   }
 
     @media (min-device-pixel-ratio: 2),
@@ -143,7 +143,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
       .slide1 {
-        background-image: url('../images/slider/sli1-desktop@2x.jpg');
+        background-image: url('../images/slider/sli1-desktop@2x.webp');
       }
     }
 }
@@ -151,7 +151,7 @@
 /* second slide */
 
 .slide2 {
-  background-image: url('../images/slider/sli2-phone.jpg');
+  background-image: url('../images/slider/sli2-phone.webp');
   animation-delay: 6s;
 }
 
@@ -160,14 +160,14 @@
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
   .slide2 {
-    background-image: url('../images/slider/sli2-phone@2x.jpg');
+    background-image: url('../images/slider/sli2-phone@2x.webp');
   }
 }
 
 
 @media screen and (min-width: 768px) {
   .slide2 {
-    background-image: url('../images/slider/sli2-tablet.jpg');
+    background-image: url('../images/slider/sli2-tablet.webp');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -175,7 +175,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .slide2 {
-      background-image: url('../images/slider/sli2-tablet@2x.jpg');
+      background-image: url('../images/slider/sli2-tablet@2x.webp');
     }
   }
 }
@@ -183,7 +183,7 @@
 
 @media screen and (min-width: 1200px) {
   .slide2 {
-    background-image: url('../images/slider/sli2-desktop.jpg');
+    background-image: url('../images/slider/sli2-desktop.webp');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -191,7 +191,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .slide2 {
-      background-image: url('../images/slider/sli2-desktop@2x.jpg');
+      background-image: url('../images/slider/sli2-desktop@2x.webp');
     }
   }
 }
@@ -201,7 +201,7 @@
 
 
 .slide3 {
-  background-image: url('../images/slider/sli3-phone.jpg');
+  background-image: url('../images/slider/sli3-phone.webp');
   animation-delay: 4s;
 }
 
@@ -210,14 +210,14 @@
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
   .slide3 {
-    background-image: url('../images/slider/sli3-phone@2x.jpg');
+    background-image: url('../images/slider/sli3-phone@2x.webp');
   }
 }
 
 
 @media screen and (min-width: 768px) {
   .slide3 {
-    background-image: url('../images/slider/sli3-tablet.jpg');
+    background-image: url('../images/slider/sli3-tablet.webp');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -225,7 +225,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .slide3 {
-      background-image: url('../images/slider/sli3-tablet@2x.jpg');
+      background-image: url('../images/slider/sli3-tablet@2x.webp');
     }
   }
 }
@@ -233,7 +233,7 @@
 
 @media screen and (min-width: 1200px) {
   .slide3 {
-    background-image: url('../images/slider/sli3-desktop.jpg');
+    background-image: url('../images/slider/sli3-desktop.webp');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -241,7 +241,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .slide3 {
-      background-image: url('../images/slider/sli3-desktop@2x.jpg');
+      background-image: url('../images/slider/sli3-desktop@2x.webp');
     }
   }
 }
@@ -251,7 +251,7 @@
 
 .slide4 {
 
-  background-image: url('../images/slider/sli2-phone.jpg');
+  background-image: url('../images/slider/sli2-phone.webp');
   animation-delay: 2s;
 }
 
@@ -260,14 +260,14 @@
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
   .slide4 {
-    background-image: url('../images/slider/sli2-phone@2x.jpg');
+    background-image: url('../images/slider/sli2-phone@2x.webp');
   }
 }
 
 
 @media screen and (min-width: 768px) {
   .slide4 {
-    background-image: url('../images/slider/sli2-tablet.jpg');
+    background-image: url('../images/slider/sli2-tablet.webp');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -275,7 +275,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .slide4 {
-      background-image: url('../images/slider/sli2-tablet@2x.jpg');
+      background-image: url('../images/slider/sli2-tablet@2x.webp');
     }
   }
 }
@@ -283,7 +283,7 @@
 
 @media screen and (min-width: 1200px) {
   .slide4 {
-    background-image: url('../images/slider/sli2-desktop.jpg');
+    background-image: url('../images/slider/sli2-desktop.webp');
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -291,7 +291,7 @@
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     .slide4 {
-      background-image: url('../images/slider/sli2-desktop@2x.jpg');
+      background-image: url('../images/slider/sli2-desktop@2x.webp');
     }
   }
 }
