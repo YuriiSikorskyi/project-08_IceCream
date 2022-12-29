@@ -1,4 +1,6 @@
 .backtop {
+  @extend %link;
+
   position: fixed;
   bottom: 10px;
   right: 10px;
