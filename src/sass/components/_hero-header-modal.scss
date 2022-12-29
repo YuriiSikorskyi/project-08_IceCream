@@ -1,18 +1,8 @@
 .header_modal {
-  // position: fixed;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
+  
   z-index: 9999;
-	padding: 28px;
-  // @media screen and (max-width: 767px) {
-	// 	// width: 95%;
-  //   // max-width: 280px;
-	// 	// // height: 95%;
-  //   // max-height: 609px;
-  //   // overflow: scroll;
-  //   padding: 28px;
-  // }
+  padding: 28px;
+  
   @media screen and (min-width: 769px) {
     max-width: 568px;
     max-height: 644px;
@@ -38,7 +28,7 @@
   border: none;
 }
 .button__close-icon {
-  fill: #131313;
+  fill: $colorBlack;
 }
 .hero-modal__title {
   font-family: 'Seymour One';
@@ -48,7 +38,7 @@
   line-height: 1.4;
   text-align: center;
   // Змінна
-  color: #131313;
+  color: $colorBlack;
 }
 .hero-modal--distance {
   margin-bottom: 83px;
@@ -60,6 +50,18 @@
 .hero-modal__list {
   display: flex;
   align-items: center;
+  position: absolute;
+  bottom: 20px;
+  z-index: 3;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 82px;
+  }
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
+
   @media screen and (max-width: 767px) {
     flex-direction: column;
     gap: 82px;
@@ -71,29 +73,23 @@
   list-style: none;
 }
 .hero-modal__item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  height: 135px;
-  padding-bottom: 20px;
-  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
-  border-radius: 15px;
   width: 132px;
+  pointer-events: none;
 }
-.hero-modal__item--cream {
-  // Змінна
+.hero-modal__check--cream {
+  background-color: $colorProduktsCream;
   border: 2px solid #96af8c;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
 }
-.hero-modal__item--coffee {
-  // Змінна
-  background: #efd478;
-  border: 2px solid #efd478;
+.hero-modal__check--coffee {
+  background: $colorProduktsCoffee;
+  border: solid #efd478;
+  box-shadow: 2px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
 }
-.hero-modal__item--milkshakes {
+.hero-modal__check--milkshakes {
   // Змінна
+  background: $colorProduktsCoffeeMilkshakes;
   border: 2px solid #d6936d;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
 }
@@ -108,7 +104,7 @@
   transform: translateX(-50%);
   border-radius: 98px;
 }
-.hero-modal__item--cream::before {
+.hero-modal__check--cream::before {
   @extend %before_hero;
   background: linear-gradient(
       0deg,
@@ -121,7 +117,7 @@
     box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
   }
 }
-.hero-modal__item--coffee::before {
+.hero-modal__check--coffee::before {
   @extend %before_hero;
   background: linear-gradient(
       0deg,
@@ -137,7 +133,7 @@
     box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
   }
 }
-.hero-modal__item--milkshakes::before {
+.hero-modal__check--milkshakes::before {
   @extend %before_hero;
   background: linear-gradient(
       0deg,
@@ -164,7 +160,7 @@
   transform: translateX(-50%);
   border-radius: 98px;
 }
-.hero-modal__item--cream::after {
+.hero-modal__check--cream::after {
   @extend %after_hero;
   // Mobile and Tablet
   background: url(../images/modal-buy-now/cream.jpg);
@@ -192,7 +188,7 @@
     }
   }
 }
-.hero-modal__item--coffee::after {
+.hero-modal__check--coffee::after {
   @extend %after_hero;
   background: url(../images/modal-buy-now/cofee.jpg);
   @media (min-device-pixel-ratio: 2),
@@ -217,7 +213,7 @@
     }
   }
 }
-.hero-modal__item--milkshakes::after {
+.hero-modal__check--milkshakes::after {
   @extend %after_hero;
   background: url(../images/modal-buy-now/milkshakes.jpg);
   @media (min-device-pixel-ratio: 2),
@@ -240,17 +236,6 @@
       background-size: contain;
     }
   }
-}
-.hero-modal__subtitle {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  // Змінна
-  color: #131313;
-  font-family: 'Montserrat';
 }
 
 // Форма
@@ -285,7 +270,7 @@
   font-size: 12px;
   line-height: 1, 4;
 
-  color: #131313;
+  color: $colorBlack;
 }
 .modal-form-hero__field--comment {
   @media screen and (max-width: 767px) {
@@ -309,7 +294,7 @@
   font-size: 12px;
   line-height: 1, 4;
 
-  color: #131313;
+  color: $colorBlack;
 }
 
 .btn-hero-modal {
@@ -318,4 +303,64 @@
 
 .btn-sec {
   @include btn-sec();
+}
+
+// Чекбокс
+
+.hero-modal__choice {
+  position: relative;
+}
+.hero-modal__checkform {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 82px;
+  }
+  @media screen and (min-width: 768px) {
+    gap: 32px;
+  }
+}
+
+.hero-modal__checkbox {
+  position: relative;
+  z-index: 4;
+  height: 135px;
+  width: 132px;
+}
+
+.hero-modal__check {
+  position: absolute;
+  z-index: 2;
+  appearance: none;
+
+  opacity: 1;
+
+  height: inherit;
+  width: inherit;
+
+  cursor: $iconCustomPointer, auto;
+
+  border-radius: 15px;
+}
+
+.hero-modal__check:checked {
+  background: #fcfcfc;
+}
+
+.hero-modal__subtitle {
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  z-index: 5;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  // Змінна
+  color: $colorBlack;
 }
