@@ -1,35 +1,36 @@
 (() => {
-  const scrollOn = false;
-  const classMenuHidden = 'mobile-menu--hidden';
-  //
-  const btnMenuOpen = document.querySelector('[data-menu-open]');
-  const btnMenuClose = document.querySelector('[data-menu-close]');
-  const menuMobile = document.querySelector('[data-mobile-menu]');
-  const menuMobileNav = document.querySelector('[data-menu-nav]');
-  //const menuBtnBuyNow = document.querySelector('.mobile-menu__btn');
+  const scrollOn = () => toggleScroll(false);
 
-  btnMenuOpen.addEventListener('click', toggleMenu);
-  btnMenuClose.addEventListener('click', toggleMenu);
-  //menuBtnBuyNow.addEventListener('click', toggleMenu);
+  const menuHiddenSelector = 'mobile-menu--hidden';
+  const menu = document.querySelector('[data-mobile-menu]');
+  const menuNav = document.querySelector('[data-menu-nav]');
+  const menuBtnOpen = document.querySelector('[data-menu-open]');
+  const menuBtnClode = document.querySelector('[data-menu-close]');
 
-  // закрываем при клике для скролинга к секции
-  const menuItems = Array.from(menuMobileNav.children);
-  menuItems.forEach(menuItem => {
-    menuItem.addEventListener('click', toggleMenu);
+  // set event listeners
+  menuBtnOpen.addEventListener('click', toggleMenu);
+  menuBtnClode.addEventListener('click', toggleMenu);
+
+  // close menu on item click
+  const menuItems = Array.from(menuNav.children);
+  menuItems.forEach(itm => {
+    itm.addEventListener('click', toggleMenu);
   });
 
-  function toggleMenu() {
-    const isOpenned = !menuMobile.classList.toggle(classMenuHidden);
-    btnMenuOpen.setAttribute('aria-expanded', isOpenned);
-    toggleScroll(isOpenned);
-  }
-
+  // hide menu on desktop(1200px and wider)
   window.matchMedia(`(min-width: 1200px)`).addEventListener('change', e => {
-    // включает скролл только если открыто меню (не модалка)
-    if (e.matches && !menuMobile.classList.contains(classMenuHidden)) {
-      menuMobile.classList.add(classMenuHidden);
-      btnMenuOpen.setAttribute('aria-expanded', false);
-      toggleScroll(scrollOn);
+    // toggle scroll for mobile menu only
+    if (e.matches && !menu.classList.contains(menuHiddenSelector)) {
+      menu.classList.add(menuHiddenSelector);
+      menuBtnOpen.setAttribute('aria-expanded', false);
+      scrollOn();
     }
   });
+
+  // mobile menu toggler
+  function toggleMenu() {
+    const isOpenned = !menu.classList.toggle(menuHiddenSelector);
+    menuBtnOpen.setAttribute('aria-expanded', isOpenned);
+    toggleScroll(isOpenned);
+  }
 })();

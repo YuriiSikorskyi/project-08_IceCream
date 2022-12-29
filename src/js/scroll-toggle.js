@@ -1,28 +1,21 @@
 (() => {
-  const classScrollOff = 'scroll-off';
+  const scrollOffSelector = 'scroll-off';
   const body = document.querySelector('body');
   const root = document.documentElement;
 
-  function getVar(varName) {
-    return root.style.getPropertyValue(varName);
-  }
-
-  function setVar(varName, val) {
-    root.style.setProperty(varName, val);
-  }
-
   if (!window.toggleScroll) {
-    window.toggleScroll = function (scrollOff) {
-      if (scrollOff) {
-        //
-        setVar('--scroll-top', window.pageYOffset);
-        body.classList.add(classScrollOff);
-        //
+    window.toggleScroll = function (disable) {
+      if (disable) {
+        // save scroll offsetY
+        root.style.setProperty('--scroll-top', window.pageYOffset);
+        body.classList.add(scrollOffSelector);
       } else {
-        body.classList.remove(classScrollOff);
-        //
+        body.classList.remove(scrollOffSelector);
+
+        // prevent scrolling
         root.style.scrollBehavior = 'auto';
-        window.scrollTo({ top: getVar('--scroll-top') });
+        // restore scroll offsetY
+        window.scrollTo({ top: root.style.getPropertyValue('--scroll-top') });
         root.style.removeProperty('scroll-behavior');
       }
     };

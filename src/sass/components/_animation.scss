@@ -1,5 +1,5 @@
 ///////////////////////
-// header buy button
+// button anim
 ///////////////////////
 
 @keyframes jittery {
@@ -37,7 +37,7 @@
 }
 
 ///////////////////////
-// simple animation
+// simple anim
 ///////////////////////
 
 @keyframes left-to-right {
@@ -45,11 +45,9 @@
     opacity: 0;
     transform: translateX(-50%);
   }
-
   50% {
     opacity: 0.6;
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -61,11 +59,9 @@
     opacity: 0;
     transform: translateY(-50%);
   }
-
   50% {
     opacity: 0.6;
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -77,11 +73,9 @@
     opacity: 0;
     transform: translateY(50%);
   }
-
   50% {
     opacity: 0.6;
   }
-
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -97,28 +91,5 @@
   }
   100% {
     opacity: 1;
-  }
-}
-
-///////////////////////
-// flipping
-///////////////////////
-
-.flipX {
-  animation: 1s anim-flipX ease infinite;
-}
-
-@keyframes anim-flipX {
-  0% {
-    opacity: 0;
-    transform: rotateX(90def);
-  }
-  50% {
-    opacity: 1;
-    transform: rotateX(720deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotateX(720deg);
   }
 }

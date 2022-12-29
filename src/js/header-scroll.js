@@ -1,12 +1,11 @@
 (() => {
   window.onscroll = () => {
-    // const classMenuHidden = 'mobile-menu--hidden';
-    // const menuMobile = document.querySelector('[data-mobile-menu]');
     const header = document.querySelector('[data-header]');
-    const headerOffsetTrigger = header.offsetHeight;
-    const pageOffset = window.pageYOffset;
-    //
-    if (pageOffset > headerOffsetTrigger) {
+    const headerYOffset = header.offsetHeight;
+    const pageYOffset = window.pageYOffset;
+
+    // shade header on scroll
+    if (pageYOffset > headerYOffset) {
       header.classList.add('header--shaded');
     } else {
       header.classList.remove('header--shaded');

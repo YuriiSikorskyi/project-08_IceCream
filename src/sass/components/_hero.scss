@@ -7,19 +7,16 @@
 
   @media screen and (min-width: 320px) {
     min-width: 320px;
-    //max-width: 320px;
   }
 
   @media screen and (min-width: 768px) {
     padding-top: 83px;
     min-width: 768px;
-    //max-width: 768px;
     height: 415px;
   }
 
   @media screen and (min-width: 1200px) {
     padding-top: 120px;
-    //max-width: 1200px;
     min-width: 1200px;
     height: 664px;
   }
@@ -53,7 +50,7 @@
   text-transform: uppercase;
   color: $colorText;
 
-  animation: left-to-right 0.75s ease 0s both;
+  animation: left-to-right 0.75s $mainAnimFunc 0s both;
 
   &-accent {
     @media screen and (max-width: 1199.98px) {
@@ -67,7 +64,7 @@
     font-size: 38px;
     line-height: calc(48 / 38);
 
-    animation: left-to-right 0.65s ease 0.3s both;
+    animation: left-to-right 0.65s $mainAnimFunc 0.3s both;
   }
 }
 
@@ -129,7 +126,7 @@
   color: $colorText;
 
   @media screen and (min-width: 768px) {
-    animation: bottom-to-top 0.5s ease 0.6s both;
+    animation: bottom-to-top 0.5s $mainAnimFunc 0.6s both;
   }
 
   @media screen and (max-width: 767.98px) {
@@ -146,7 +143,7 @@
     font-size: 14px;
     line-height: calc(20 / 14);
 
-    animation: bottom-to-top 0.5s ease 0.7s both;
+    animation: bottom-to-top 0.5s $mainAnimFunc 0.7s both;
   }
 
   &-btn {
@@ -223,11 +220,10 @@
     left: 0;
 
     pointer-events: none;
-
-    animation: bottom-to-top 0.5s ease 0.3s both;
+    animation: bottom-to-top 0.5s $mainAnimFunc 0.3s both;
 
     @media screen and (min-width: 1200px) {
-      animation: bottom-to-top 0.5s ease 0.5s both;
+      animation: bottom-to-top 0.5s $mainAnimFunc 0.5s both;
     }
   }
 
@@ -237,15 +233,15 @@
     left: 83px;
     z-index: 1;
 
-    animation: bottom-to-top 0.5s ease 0.3s both;
+    animation: bottom-to-top 0.5s $mainAnimFunc 0.3s both;
 
     @media screen and (min-width: 768px) {
-      animation: bottom-to-top 0.8s ease 0.1s both;
+      animation: bottom-to-top 0.8s $mainAnimFunc 0.1s both;
       left: 408px;
     }
 
     @media screen and (min-width: 1200px) {
-      animation: bottom-to-top 0.8s ease 0.3s both;
+      animation: bottom-to-top 0.8s $mainAnimFunc 0.3s both;
       left: 652px;
     }
   }
@@ -256,7 +252,7 @@
     left: 32px;
     z-index: 1;
 
-    animation: bottom-to-top 0.7s ease 0.3s both;
+    animation: bottom-to-top 0.7s $mainAnimFunc 0.3s both;
 
     @media screen and (max-width: 768px) {
       display: none;
@@ -265,7 +261,7 @@
     @media screen and (min-width: 1200px) {
       bottom: 63px;
       left: 16px;
-      animation: bottom-to-top 0.7s ease 0.5s both;
+      animation: bottom-to-top 0.7s $mainAnimFunc 0.5s both;
     }
   }
 }

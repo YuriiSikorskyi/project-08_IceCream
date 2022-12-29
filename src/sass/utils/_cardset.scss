@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   gap: $gap;
 
+  // high specificity!
   & > :nth-child(n) {
     $gapsTotal: $gap * ($itemsPerRow - 1);
     flex-basis: calc((100% - $gapsTotal) / $itemsPerRow);
