@@ -37,7 +37,7 @@
 
   const backdrop = document.querySelector('.js-overlay-modal');
   const header = document.querySelector('.header');
-  const headerBtnBuyNow = document.querySelector('.header__btn');
+  const headerBtnBuy = document.querySelector('.header__btn');
   const modals = Array.from(document.getElementsByClassName('modal'));
   const menuMobile = document.querySelector('[data-mobile-menu]');
 
@@ -48,33 +48,27 @@
     const modalIsOpenned =
       backdrop.classList.contains('active') || mobileIsOpenned;
     const headerIsShaded = header.classList.contains('header--shaded');
-    //
+
     // toggle Buy now anim
-    //
-    headerBtnBuyNow.style.animation = modalIsOpenned ? 'unset' : null;
-    //
-    // body scroll lock, header hiding
-    //
+    headerBtnBuy.style.animation = modalIsOpenned ? 'unset' : null;
+
+    // lock body scroll and hide header
     toggleScroll(modalIsOpenned);
     header.style.display = headerIsShaded && modalIsOpenned ? 'none' : null;
-    //
-    // fix top for modal
-    //
+
+    // fix top for active modal
     if (modalIsOpenned) {
       const viewportHeight = document.documentElement.clientHeight;
 
-      let pos, modalHeight;
       modals.forEach(modal => {
-        //
         modal.style.top = null;
         modal.style.transform = null;
-        //
+
         // .modal.active found
         if (modal.classList.contains('active')) {
-          pos = modal.getBoundingClientRect();
-          modalHeight = pos.height;
+          const modalPos = modal.getBoundingClientRect();
 
-          if (viewportHeight <= modalHeight) {
+          if (viewportHeight <= modalPos.height) {
             modal.style.top = 0;
             modal.style.transform = 'translate(-50%, 0)';
           }
@@ -83,12 +77,3 @@
     }
   });
 })();
-
-// const isHidden = el => {
-//   const styles = window.getComputedStyle(el);
-//   return (
-//     styles.display === 'none' ||
-//     styles.visibility === 'hidden' ||
-//     styles.opacity === '0'
-//   );
-// };

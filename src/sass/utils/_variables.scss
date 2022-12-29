@@ -10,7 +10,6 @@ $colorProduktsCream: #aec6a5;
 $colorProduktsCoffee: #efd478;
 $colorProduktsCoffeeMilkshakes: #d6936d;
 
-
 // font
 $mainFontFamily: 'Montserrat', sans-serif;
 $secondaryFontFamily: 'Seymour One', sans-serif;
@@ -28,3 +27,4 @@ $breakpoints: (
 // animation
 $mainTransDur: 250ms;
 $mainTransFunc: cubic-bezier(0.4, 0, 0.2, 1);
+$mainAnimFunc: ease;

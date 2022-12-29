@@ -4,31 +4,11 @@
   left: 0;
   width: 100%;
   z-index: 11;
-
-  &--shaded {
-    border-bottom: 1px solid rgba($colorWhite, 0.2);
-    background-color: rgba($colorBackground, 0.9);
-    backdrop-filter: blur(3px);
-    @include transition(background-color);
-
-    .header__container {
-      @media screen and (min-width: 320px) {
-        height: 50px;
-      }
-
-      @media screen and (min-width: 768px) {
-        height: 55px;
-      }
-
-      @media screen and (min-width: 1200px) {
-        .header__logo {
-          width: 44px;
-          height: 43px;
-        }
-      }
-    }
-  }
 }
+
+//////////////////////
+// container
+//////////////////////
 
 .header__container {
   @extend .container;
@@ -44,6 +24,35 @@
   @media screen and (min-width: 1200px) {
     height: 95px;
     justify-content: space-between;
+  }
+}
+
+//////////////////////
+// shading
+//////////////////////
+
+.header--shaded {
+  border-bottom: 1px solid rgba($colorWhite, 0.2);
+  background-color: rgba($colorBackground, 0.9);
+  backdrop-filter: blur(3px);
+
+  @include transition(background-color);
+
+  .header__container {
+    @media screen and (min-width: 320px) {
+      height: 50px;
+    }
+
+    @media screen and (min-width: 768px) {
+      height: 55px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      .header__logo {
+        width: 44px;
+        height: 43px;
+      }
+    }
   }
 }
 
@@ -122,6 +131,7 @@
 
 .header__btn {
   animation: jittery 5s infinite;
+
   &:hover {
     animation: heartbeat 0.5s infinite;
   }
@@ -135,7 +145,7 @@
   &__nav-list {
     display: none;
 
-    animation: top-to-bottom 0.5s ease 0s both;
+    animation: top-to-bottom 0.5s $mainAnimFunc 0s both;
 
     @media screen and (min-width: 1200px) {
       display: flex;
@@ -160,12 +170,3 @@
     }
   }
 }
-
-// @keyframes appear {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }

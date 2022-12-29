@@ -15,7 +15,6 @@
 ///////////////////////
 
 %btn {
-  // display: block;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +24,7 @@
   background-color: transparent;
   border-style: none;
 
-  cursor: $iconCustomPointer, auto; //pointer
+  cursor: $iconCustomPointer, auto;
 
   @include transition(color);
 }
@@ -46,11 +45,10 @@
   border: 2px solid transparent;
   border-radius: 10px;
 
-  cursor: $iconCustomPointer, auto; //pointer
+  cursor: $iconCustomPointer, auto;
 
   // button icon
   svg {
-    // margin: 0;
     width: 6px;
     height: 10px;
     fill: currentColor;
@@ -87,9 +85,11 @@
   &:focus-visible {
     background-color: $colorGreen;
   }
+
   &:focus-visible {
     color: $colorText;
   }
+
   &:disabled {
     background-color: $colorBtnDisabled;
   }
@@ -120,9 +120,11 @@
   &:focus-visible {
     border-color: $colorGreen;
   }
+
   &:focus-visible {
     color: $colorText;
   }
+
   &:disabled {
     border-color: $colorBtnDisabled;
   }
@@ -154,9 +156,11 @@
   &:hover {
     color: $colorGreen;
   }
+
   &:focus-visible {
     color: $colorText;
   }
+
   &:disabled {
     color: $colorBtnDisabled;
   }
