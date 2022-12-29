@@ -222,7 +222,7 @@
     left: 0;
 
     pointer-events: none;
-    animation: bottom-to-top 0.35s $mainAnimFunc 0.1s both;
+    // animation: bottom-to-top 0.35s $mainAnimFunc 0.1s both;
 
     @media screen and (min-width: 1200px) {
       animation: bottom-to-top 0.5s $mainAnimFunc 0.5s both;
@@ -235,7 +235,7 @@
     left: 83px;
     z-index: 1;
 
-    animation: bottom-to-top 0.35s $mainAnimFunc 0.1s both;
+    // animation: bottom-to-top 0.35s $mainAnimFunc 0.1s both;
 
     @media screen and (min-width: 768px) {
       animation: bottom-to-top 0.8s $mainAnimFunc 0.1s both;
