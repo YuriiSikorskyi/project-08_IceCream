@@ -24,7 +24,10 @@
     }
 
     // show backtop on scroll
-    backtop.style.display =
-      pageYOffset > heroYOffset + prodsYOffset / 2 ? null : 'none';
+    if (pageYOffset > heroYOffset + prodsYOffset / 2) {
+      backtop.classList.remove('backtop--hidden');
+    } else {
+      backtop.classList.add('backtop--hidden');
+    }
   };
 })();
